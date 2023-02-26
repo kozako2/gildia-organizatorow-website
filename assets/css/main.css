@@ -47,3 +47,33 @@ body {
 .header-container>.header-text-content {
     padding-left: 2ex;
 }
+
+.landing-page-layout-with-image-container {
+    display: flex;
+
+    flex-wrap: nowrap;
+
+    justify-content: space-around;
+    align-items: center;
+}
+
+.landing-page-layout-with-image-container.image-on-left {
+    flex-direction: row;
+}
+
+.landing-page-layout-with-image-container.image-on-right {
+    flex-direction: row-reverse;
+}
+
+
+.landing-page-layout-with-image-container img {
+    max-width: 30%;
+}
+
+@media (max-width: 1000px) {
+    .landing-page-layout-with-image-container {
+
+        flex-wrap: wrap;
+
+    }
+}
