@@ -1,0 +1,148 @@
+{{ define "main" }}
+<main aria-role="main">
+
+    <div class="homepage-content">
+
+        <div class="flex-container">
+            <header class="homepage-header flex-items">
+                <div>
+
+                    <h1 class="header-container">
+                        {{ $image := resources.Get "images/logo.svg" }}
+                        {{ with $image }}
+                        <img src="{{ .RelPermalink }}" class="header-image">
+                        {{ end }}
+                        <span class="header-text-content">{{.Title}}</span>
+                    </h1>
+
+                    {{ with .Params.subtitle }}
+                    <span class="subtitle">{{.}}</span>
+                    {{ end }}
+                </div>
+            </header>
+
+            <div class="flex-items">
+                <div>first section</div>
+
+            </div>
+            <div class="flex-items">
+                <div>
+                    2 section
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam erat magna, cursus eget gravida ac,
+                    molestie sed ante. Sed ac dui a arcu aliquet egestas. Praesent sollicitudin mi ut nisi porta
+                    vehicula.
+                    Ut accumsan finibus auctor. Vestibulum eros mauris, ultrices in gravida ac, dignissim sed quam.
+                    Nulla at
+                    ex vel elit bibendum semper eget fringilla ipsum. Vestibulum ante ipsum primis in faucibus orci
+                    luctus
+                    et ultrices posuere cubilia curae;
+
+                    Donec a magna at orci rutrum finibus sed ultricies eros. Quisque pharetra magna sit amet tempus
+                    tincidunt. Phasellus commodo leo ac lectus convallis, sit amet interdum libero pulvinar. Fusce
+                    faucibus
+                    elit nec turpis lobortis faucibus. Etiam maximus sed velit dapibus elementum. Integer gravida, lacus
+                    venenatis hendrerit hendrerit, ante felis fermentum diam, nec ultrices lorem odio a orci. Integer
+                    sed
+                    sem vel magna ultricies congue eu non lorem. Phasellus ac leo a erat laoreet tempor in nec metus.
+                    Nulla
+                    rhoncus odio vel congue faucibus. Sed ut pulvinar diam, sed egestas arcu. Maecenas feugiat ex ut
+                    libero
+                    pretium cursus. Integer interdum, felis a sagittis feugiat, erat nisl varius dolor, sit amet
+                    eleifend
+                    arcu tortor et magna. Maecenas lacinia tempus enim, vel bibendum nisl malesuada nec.
+                </div>
+            </div>
+            <div class="flex-items">
+                <div>
+                    3 section
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam erat magna, cursus eget gravida ac,
+                    molestie sed ante. Sed ac dui a arcu aliquet egestas. Praesent sollicitudin mi ut nisi porta
+                    vehicula.
+                    Ut accumsan finibus auctor. Vestibulum eros mauris, ultrices in gravida ac, dignissim sed quam.
+                    Nulla at
+                    ex vel elit bibendum semper eget fringilla ipsum. Vestibulum ante ipsum primis in faucibus orci
+                    luctus
+                    et ultrices posuere cubilia curae;
+
+                    Donec a magna at orci rutrum finibus sed ultricies eros. Quisque pharetra magna sit amet tempus
+                    tincidunt. Phasellus commodo leo ac lectus convallis, sit amet interdum libero pulvinar. Fusce
+                    faucibus
+                    elit nec turpis lobortis faucibus. Etiam maximus sed velit dapibus elementum. Integer gravida, lacus
+                    venenatis hendrerit hendrerit, ante felis fermentum diam, nec ultrices lorem odio a orci. Integer
+                    sed
+                    sem vel magna ultricies congue eu non lorem. Phasellus ac leo a erat laoreet tempor in nec metus.
+                    Nulla
+                    rhoncus odio vel congue faucibus. Sed ut pulvinar diam, sed egestas arcu. Maecenas feugiat ex ut
+                    libero
+                    pretium cursus. Integer interdum, felis a sagittis feugiat, erat nisl varius dolor, sit amet
+                    eleifend
+                    arcu tortor et magna. Maecenas lacinia tempus enim, vel bibendum nisl malesuada nec.
+                </div>
+            </div>
+            <div class="flex-items">
+                <div>
+                    4 section
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam erat magna, cursus eget gravida ac,
+                    molestie sed ante. Sed ac dui a arcu aliquet egestas. Praesent sollicitudin mi ut nisi porta
+                    vehicula.
+                    Ut accumsan finibus auctor. Vestibulum eros mauris, ultrices in gravida ac, dignissim sed quam.
+                    Nulla at
+                    ex vel elit bibendum semper eget fringilla ipsum. Vestibulum ante ipsum primis in faucibus orci
+                    luctus
+                    et ultrices posuere cubilia curae;
+
+                    Donec a magna at orci rutrum finibus sed ultricies eros. Quisque pharetra magna sit amet tempus
+                    tincidunt. Phasellus commodo leo ac lectus convallis, sit amet interdum libero pulvinar. Fusce
+                    faucibus
+                    elit nec turpis lobortis faucibus. Etiam maximus sed velit dapibus elementum. Integer gravida, lacus
+                    venenatis hendrerit hendrerit, ante felis fermentum diam, nec ultrices lorem odio a orci. Integer
+                    sed
+                    sem vel magna ultricies congue eu non lorem. Phasellus ac leo a erat laoreet tempor in nec metus.
+                    Nulla
+                    rhoncus odio vel congue faucibus. Sed ut pulvinar diam, sed egestas arcu. Maecenas feugiat ex ut
+                    libero
+                    pretium cursus. Integer interdum, felis a sagittis feugiat, erat nisl varius dolor, sit amet
+                    eleifend
+                    arcu tortor et magna. Maecenas lacinia tempus enim, vel bibendum nisl malesuada nec.
+                </div>
+            </div>
+
+            <footer class="flex-items">
+                <div>
+                    <p>Author: GO</p>
+                </div>
+
+
+            </footer>
+
+        </div>
+
+        {{/* {{.Content}} */}}
+        {{/* {{ with .Site.GetPage "/landing" }}
+        {{ .Content }}
+        {{ end }} */}}
+
+
+
+    </div>
+
+</main>
+{{ end }}
