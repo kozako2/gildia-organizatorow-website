@@ -67,7 +67,7 @@ body {
 
 
 .landing-page-layout-with-image-container img {
-    max-width: 30%;
+    max-width: 360px;
 }
 
 @media (max-width: 1000px) {
