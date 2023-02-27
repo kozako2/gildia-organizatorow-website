@@ -150,6 +150,15 @@
         </div>
     </section>
 
+    {{ range where site.RegularPages "Type" "landing" }}
+    <section class="main-item">
+        <div>
+            {{ .Content }}
+        </div>
+    </section>
+    {{ end }}
+
+
     <footer class="main-item">
         <div>
             <p>Author: GO</p>
