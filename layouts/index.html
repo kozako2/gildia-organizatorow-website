@@ -5,11 +5,11 @@
         <div>
 
             <h1 class="header-container">
-                {{ $image := resources.Get "images/logo.svg" }}
+                {{ $image := resources.Get "images/logo_all.svg" }}
                 {{ with $image }}
-                <img src="{{ .RelPermalink }}" class="header-image">
+                <img src="{{ .RelPermalink }}" class="header-image" alt="Gildia organizatorów logo">
                 {{ end }}
-                <span class="header-text-content">{{.Title}}</span>
+                {{/* <span class="header-text-content">{{.Title}}</span> */}}
             </h1>
 
             {{ with .Params.subtitle }}
