@@ -14,8 +14,13 @@
 }
 
 .main-container>.main-item:nth-child(2n) {
-    color: white;
-    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+    background-color: #030504;
+}
+
+.main-container>.main-item:nth-child(2n +1) {
+    color: #030504;
+    background-color: #ffffff;
 }
 
 .main-container>.main-item>div {
