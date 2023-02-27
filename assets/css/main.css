@@ -1,4 +1,4 @@
-.flex-container {
+.main-container {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -7,25 +7,25 @@
     min-height: 100vh;
 }
 
-.flex-container>.flex-items {
+.main-container>.main-item {
     width: 100%;
     padding-top: 1em;
     padding-bottom: 1em;
 }
 
-.flex-container>.flex-items:nth-child(2n) {
+.main-container>.main-item:nth-child(2n) {
     color: white;
     background-color: rgb(0, 0, 0);
 }
 
-.flex-container>.flex-items>div {
+.main-container>.main-item>div {
 
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2em;
 }
 
-.flex-container>.flex-items:nth-last-child(2) {
+.main-container>.main-item:nth-last-child(2) {
     /* Make space for proper footer */
     flex-grow: 1;
 }
