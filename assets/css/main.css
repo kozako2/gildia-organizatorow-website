@@ -89,6 +89,10 @@ footer {
     max-width: 360px;
 }
 
+.landing-page-layout-with-image-container div {
+    max-width: 50%;
+}
+
 @media (max-width: 1000px) {
     .landing-page-layout-with-image-container {
 

@@ -19,8 +19,35 @@
     </header>
 
     <section class="main-item">
-        <div>first section</div>
+        <div>
 
+            <div class="landing-page-layout-with-image-container image-on-left">
+
+                {{ $image := resources.Get "images/logo.svg" }}
+                {{ with $image }}
+                <img src="{{ .RelPermalink }}">
+                {{ end }}
+                <div>
+                    <h2>KIM JESTEŚMY?</h2>
+                    <p>
+
+                        Jesteśmy ekipą, której się chce i która kocha to, co robi! Poznaliśmy się w 2013 roku podczas
+                        organizacji eventów. Od tego czasu nasza grupa cały czas się rozrastała. Zbieraliśmy
+                        doświadczenie,
+                        jednocześnie coraz bardziej się integrując i ucząc od siebie nawzajem. W 2023 roku zwarliśmy
+                        szyki i
+                        łącząc swoje siły założyliśmy stowarzyszenie Gildia Organizatorów. Mamy zaufanie do siebie i do
+                        naszych umiejętności. Stawiamy na wspólne działanie oparte na otwartość.  
+
+                    </p>
+                    <p>
+                        Łączy nas sympatia do szeroko pojętej kultury i pasja do organizowania większych i mniejszych
+                        wydarzeń kulturalnych. Każdy z nas to specjalista z innej dziedziny.
+                    </p>
+                </div>
+
+            </div>
+        </div>
     </section>
     <section class="main-item">
         <div>
