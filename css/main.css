@@ -38,6 +38,16 @@
 
 body {
     margin: 0 auto;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+
+h1,
+h2,
+h3 {
+    color: #095326;
+    font-family: 'Capsuula', sans-serif;
+    font-weight: 400;
 }
 
 footer {
@@ -77,6 +87,10 @@ footer {
 
 .landing-page-layout-with-image-container img {
     max-width: 360px;
+}
+
+.landing-page-layout-with-image-container div {
+    max-width: 50%;
 }
 
 @media (max-width: 1000px) {
