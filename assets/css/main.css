@@ -42,6 +42,14 @@ body {
     font-weight: 300;
 }
 
+h1,
+h2,
+h3 {
+    color: #095326;
+    font-family: 'Capsuula', sans-serif;
+    font-weight: 400;
+}
+
 footer {
     background-color: #095326 !important;
 }
