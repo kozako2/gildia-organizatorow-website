@@ -27,6 +27,34 @@
     {{ end }}
 
 
+    <section class="main-item">
+        <div>
+            <h2>NASZE REALIZACJE:</h2>
+            <div class="landing-page-projects-container">
+                <figure>
+                    <picture>
+                        {{ $image := resources.Get "images/projekt_df.png" }}
+                        {{ with $image }}
+                        <img src="{{ .RelPermalink }}" class="header-image" alt="Gildia organizatorów logo">
+                        {{ end }}
+                    </picture>
+                    <figcaption>DNI FANTASTYKI</figcaption>
+                </figure>
+
+                <figure>
+                    <picture>
+                        {{ $image := resources.Get "images/projekt_lesnica_park.png" }}
+                        {{ with $image }}
+                        <img src="{{ .RelPermalink }}" class="header-image" alt="Gildia organizatorów logo">
+                        {{ end }}
+                    </picture>
+                    <figcaption>PARK ESK W LEŚNICY</figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+
     <footer class="main-item">
         <div>
             <p>Author: GO</p>
