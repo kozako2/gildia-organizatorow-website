@@ -19,7 +19,11 @@
     </header>
 
     {{ range where site.RegularPages "Type" "landing" }}
-    {{ partial "landing-page-section.html" . }}
+    <section class="main-item">
+        <div>
+            {{ partial "landing-page-section.html" . }}
+        </div>
+    </section>
     {{ end }}
 
 
