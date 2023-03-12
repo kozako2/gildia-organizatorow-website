@@ -1,5 +1,13 @@
 <section class="main-item">
     <div>
-        {{ .Content }}
+        <div class="landing-page-layout-with-image-container image-on-left">
+            {{ $image := .Resources.GetMatch "images/logo.svg" }}
+            {{ with $image }}
+            <img src="{{ .RelPermalink }}">
+            {{ end }}
+            <div>
+                {{ .Content }}
+            </div>
+        </div>
     </div>
 </section>
