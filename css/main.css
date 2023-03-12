@@ -50,6 +50,12 @@ h3 {
     font-weight: 400;
 }
 
+figcaption {
+    font-family: 'Capsuula', sans-serif;
+    font-weight: 400;
+    font-size: x-large;
+}
+
 footer {
     background-color: #095326 !important;
 }
@@ -91,6 +97,19 @@ footer {
 
 .landing-page-layout-with-image-container div {
     max-width: 50%;
+}
+
+.landing-page-projects-container {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: space-around;
+    align-items: center;
+}
+
+.landing-page-projects-container img {
+    max-height: 360px;
 }
 
 @media (max-width: 1000px) {
