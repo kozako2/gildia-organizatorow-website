@@ -1,7 +1,8 @@
 <section class="main-item">
     <div>
-        <div class="landing-page-layout-with-image-container image-on-left">
-            {{ $image := .Resources.GetMatch "images/logo.svg" }}
+        {{ $image_place_class := cond (default false .Params.images_on_right) "image-on-right" "image-on-left" }}
+        <div class="landing-page-layout-with-image-container {{$image_place_class}}">
+            {{ $image := .Resources.GetMatch "images/*.svg" }}
             {{ with $image }}
             <img src="{{ .RelPermalink }}">
             {{ end }}
