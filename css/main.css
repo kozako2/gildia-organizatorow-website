@@ -15,7 +15,7 @@
 
 .main-container>.main-item:nth-child(2n+1) {
     color: #F4F4F4;
-    background-color: #0F0F0F;
+    background-color: #272727;
 }
 
 .main-container>.main-item:nth-child(2n) {
@@ -57,6 +57,7 @@ figcaption {
 }
 
 footer {
+    color: #F4F4F4 !important;
     background-color: #095326 !important;
 }
 
