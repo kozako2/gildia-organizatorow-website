@@ -1,5 +1,6 @@
 ---
 title: A new post with the filename old-post.md
+draft: true
 resources:
 - title: dummy svg
   src: images/dummy.svg
