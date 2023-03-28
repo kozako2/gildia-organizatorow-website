@@ -113,6 +113,15 @@ footer {
     max-height: 360px;
 }
 
+.footer-container {
+    display: flex;
+    align-items: center;
+}
+
+.footer-container>.footer-image {
+    height: 3em;
+}
+
 @media (max-width: 1000px) {
     .landing-page-layout-with-image-container {
 
