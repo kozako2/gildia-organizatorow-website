@@ -23,6 +23,11 @@
     {{ block "main" . }}
     <!-- The part of the page that begins to differ between templates -->
     {{ end }}
+
+    {{ block "footer" . }}
+        {{ partial "footer.html" . }}
+    {{ end }}
+
 </body>
 
 </html>
