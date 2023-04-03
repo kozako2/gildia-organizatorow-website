@@ -1,42 +1,38 @@
 {{ define "main" }}
 
-<main aria-role="main" class="main-container">
+{{ range where site.RegularPages "Type" "landing" }}
+<section class="section-row white-background-row">
+    <div>
+        {{ partial "landing-page-section.html" . }}
+    </div>
+</section>
+{{ end }}
 
-    {{ range where site.RegularPages "Type" "landing" }}
-    <section class="section-row white-background-row">
-        <div>
-            {{ partial "landing-page-section.html" . }}
+<section class="section-row gray-background-row">
+    <div>
+        <h2>NASZE REALIZACJE:</h2>
+        <div class="landing-page-projects-container">
+            <figure>
+                <picture>
+                    {{ $image := resources.Get "images/projekt_df.png" }}
+                    {{ with $image }}
+                    <img src="{{ .RelPermalink }}" class="header-image" alt="Gildia organizatorów logo">
+                    {{ end }}
+                </picture>
+                <figcaption>DNI FANTASTYKI</figcaption>
+            </figure>
+
+            <figure>
+                <picture>
+                    {{ $image := resources.Get "images/projekt_lesnica_park.png" }}
+                    {{ with $image }}
+                    <img src="{{ .RelPermalink }}" class="header-image" alt="Gildia organizatorów logo">
+                    {{ end }}
+                </picture>
+                <figcaption>PARK ESK W LEŚNICY</figcaption>
+            </figure>
         </div>
-    </section>
-    {{ end }}
+    </div>
+</section>
 
-
-    <section class="section-row gray-background-row">
-        <div>
-            <h2>NASZE REALIZACJE:</h2>
-            <div class="landing-page-projects-container">
-                <figure>
-                    <picture>
-                        {{ $image := resources.Get "images/projekt_df.png" }}
-                        {{ with $image }}
-                        <img src="{{ .RelPermalink }}" class="header-image" alt="Gildia organizatorów logo">
-                        {{ end }}
-                    </picture>
-                    <figcaption>DNI FANTASTYKI</figcaption>
-                </figure>
-
-                <figure>
-                    <picture>
-                        {{ $image := resources.Get "images/projekt_lesnica_park.png" }}
-                        {{ with $image }}
-                        <img src="{{ .RelPermalink }}" class="header-image" alt="Gildia organizatorów logo">
-                        {{ end }}
-                    </picture>
-                    <figcaption>PARK ESK W LEŚNICY</figcaption>
-                </figure>
-            </div>
-        </div>
-    </section>
-
-</main>
 {{ end }}
