@@ -15,30 +15,30 @@
     min-height: 100vh;
 }
 
-.main-container>.main-item {
+.main-container>.section-row {
     width: 100%;
     padding-top: 1em;
     padding-bottom: 1em;
 }
 
-.main-container>.main-item:nth-child(2n+1) {
+.main-container>.section-row:nth-child(2n+1) {
     color: var(--white);
     background-color: var(--gray1);
 }
 
-.main-container>.main-item:nth-child(2n) {
+.main-container>.section-row:nth-child(2n) {
     color: var(--black);
     background-color: var(--white);
 }
 
-.main-container>.main-item>div {
+.main-container>.section-row>div {
 
     max-width: var(--container-max-width);
     margin: 0 auto;
     padding: 0 2em;
 }
 
-.main-container>.main-item:nth-last-child(2) {
+.main-container>.section-row:nth-last-child(2) {
     /* Make space for proper footer */
     flex-grow: 1;
 }

@@ -4,7 +4,7 @@
     {{ partial "header.html" . }}
 
     {{ range where site.RegularPages "Type" "landing" }}
-    <section class="main-item">
+    <section class="section-row">
         <div>
             {{ partial "landing-page-section.html" . }}
         </div>
@@ -12,7 +12,7 @@
     {{ end }}
 
 
-    <section class="main-item">
+    <section class="section-row">
         <div>
             <h2>NASZE REALIZACJE:</h2>
             <div class="landing-page-projects-container">
