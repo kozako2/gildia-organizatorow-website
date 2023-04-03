@@ -1,22 +1,7 @@
 {{ define "main" }}
 <main aria-role="main" class="main-container">
 
-    <header class="homepage-header main-item">
-        <div>
-
-            <h1 class="header-container">
-                {{ $image := resources.Get "images/GILDIA_LOGO_COLOR_WHITE_TEXT.svg" }}
-                {{ with $image }}
-                <img src="{{ .RelPermalink }}" class="header-image" alt="Gildia organizatorów logo">
-                {{ end }}
-                {{/* <span class="header-text-content">{{.Title}}</span> */}}
-            </h1>
-
-            {{ with .Params.subtitle }}
-            <span class="subtitle">{{.}}</span>
-            {{ end }}
-        </div>
-    </header>
+    {{ partial "header.html" . }}
 
     {{ range where site.RegularPages "Type" "landing" }}
     <section class="main-item">
