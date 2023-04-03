@@ -15,27 +15,26 @@
     min-height: 100vh;
 }
 
-.main-container>.section-row {
+.section-row {
     width: 100%;
     padding-top: 1em;
     padding-bottom: 1em;
 }
 
-.main-container>.section-row:nth-child(2n+1) {
+.section-row>div {
+    max-width: var(--container-max-width);
+    margin: 0 auto;
+    padding: 0 2em;
+}
+
+.gray-background-row {
     color: var(--white);
     background-color: var(--gray1);
 }
 
-.main-container>.section-row:nth-child(2n) {
+.white-background-row {
     color: var(--black);
     background-color: var(--white);
-}
-
-.main-container>.section-row>div {
-
-    max-width: var(--container-max-width);
-    margin: 0 auto;
-    padding: 0 2em;
 }
 
 .main-container>.section-row:nth-last-child(2) {
