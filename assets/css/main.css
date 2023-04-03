@@ -57,8 +57,17 @@ figcaption {
 }
 
 footer {
-    color: #F4F4F4 !important;
-    background-color: #095326 !important;
+    width: 100%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    color: #F4F4F4;
+    background-color: #095326;
+}
+
+footer>div {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2em;
 }
 
 .header-container {
