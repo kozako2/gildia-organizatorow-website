@@ -1,0 +1,19 @@
+{{ define "main" }}
+<section class="section-row">
+
+  <h2>{{ .Content }}</h2>
+
+  <div class="flex-container">
+
+    {{ range $.Site.Data.about_us.members }}
+      <a href="">
+        {{ .name }}
+        {{ .function }}
+        {{ .description | markdownify }}
+      </a>
+    {{ end }}
+
+  </div>
+</section>
+{{ end }}
+

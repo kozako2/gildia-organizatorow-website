@@ -2,14 +2,14 @@
 
 {{ range where site.RegularPages "Type" "landing" }}
 <section class="section-row white-background-row">
-    <div>
+    <div class="section-row-content">
         {{ partial "landing-page-section.html" . }}
     </div>
 </section>
 {{ end }}
 
 <section class="section-row gray-background-row">
-    <div>
+    <div class="section-row-content">
         <h2>NASZE REALIZACJE:</h2>
         <div class="landing-page-projects-container">
             <figure>
