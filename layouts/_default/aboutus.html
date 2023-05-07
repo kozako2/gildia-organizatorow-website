@@ -30,9 +30,11 @@
       <!--TODO: remove bg, move modals as siblings of the entire content -->
       <div tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="memberDetailsModal{{ $.Scratch.Get " index" }}"
         id="{{ $modalId }}" class="member-details-modal">
-        <h3 id="memberDetailsModal{{ $.Scratch.Get " index" }}">Test {{ $.Scratch.Get "index" }}.</h3>
+        <div class="member-details-modal-content">
+          <h3 id="memberDetailsModal{{ $.Scratch.Get " index" }}">Test {{ $.Scratch.Get "index" }}.</h3>
 
-        <button onclick="toggleDialog('hide', '{{ $modalId }}');" class="close-button">close</button>
+          <button onclick="toggleDialog('hide', '{{ $modalId }}');" class="close-button">close</button>
+        </div>
       </div>
 
     {{ $.Scratch.Set "index" (add ($.Scratch.Get "index") 1) }}
