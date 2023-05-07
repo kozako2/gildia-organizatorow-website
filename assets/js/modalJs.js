@@ -12,9 +12,6 @@ function toggleDialog(sh, index) {
     closeButton = dialog.getElementsByClassName("close-button")[0];
     pagebackground = document.getElementById("bg");
 
-    var numberOfTiles = dialogParent.querySelectorAll(":scope > div").length;
-    console.log(numberOfTiles);
-
     if (sh === "show") {
         lastFocus = document.activeElement;
 
@@ -25,8 +22,8 @@ function toggleDialog(sh, index) {
         dialogParent.style.display = 'block';
 
         // siblings on the left and right
-        displayPreviousTile(index, numberOfTiles);
-        displayNextTile(index, numberOfTiles);
+        displayPreviousTile(index);
+        displayNextTile(index);
 
         // after displaying the dialog, focus an element inside it
         closeButton.focus();
@@ -35,8 +32,8 @@ function toggleDialog(sh, index) {
         pagebackground.setAttribute("aria-hidden", "true");
 
     } else {
-        hidePreviousTile(index, numberOfTiles);
-        hideNextTile(index, numberOfTiles);
+        hidePreviousTile(index);
+        hideNextTile(index);
         openedModal = undefined;
         dialog.style.display = 'none';
         dialogParent.style.display = 'none';
@@ -45,55 +42,60 @@ function toggleDialog(sh, index) {
     }
 }
 
-function displayPreviousTile(index, numberOfTiles) {
-    var previousTileIndex = ((index - 1) % numberOfTiles + numberOfTiles) % numberOfTiles;
-    var previousTile = dialogParent.querySelectorAll(":scope > div")[previousTileIndex];
+function displayPreviousTile(index) {
+    var previousTile = getModalByIndex(getPreviousTileIndex(index));
     previousTile.classList.add("member-details-modal-content-right-preview");
     previousTile.style.display = "block";
 }
 
-function hidePreviousTile(index, numberOfTiles) {
-    var previousTileIndex = ((index - 1) % numberOfTiles + numberOfTiles) % numberOfTiles;
-    var previousTile = dialogParent.querySelectorAll(":scope > div")[previousTileIndex];
+function hidePreviousTile(index) {
+    var previousTile = getModalByIndex(getPreviousTileIndex(index));
     previousTile.classList.remove("member-details-modal-content-right-preview");
     previousTile.style.display = "none";
 }
 
-function displayNextTile(index, numberOfTiles) {
-    var nextTileIndex = (index + 1) % numberOfTiles;
-    var nextTile = dialogParent.querySelectorAll(":scope > div")[nextTileIndex];
+function displayNextTile(index) {
+    var nextTile = getModalByIndex(getNextTileIndex(index));
     nextTile.classList.add("member-details-modal-content-left-preview");
     nextTile.style.display = "block";
 }
-function hideNextTile(index, numberOfTiles) {
-    var nextTileIndex = (index + 1) % numberOfTiles;
-    var nextTile = dialogParent.querySelectorAll(":scope > div")[nextTileIndex];
+function hideNextTile(index) {
+    var nextTile = getModalByIndex(getNextTileIndex(index));
     nextTile.classList.remove("member-details-modal-content-left-preview");
     nextTile.style.display = "none";
 }
 
 function modalNavigationRight() {
-    var dialogParent = document.getElementById("memberDetailsModalBackground");
-    var numberOfTiles = dialogParent.querySelectorAll(":scope > div").length;
-    var newIndex = ((openedModal - 1) % numberOfTiles + numberOfTiles) % numberOfTiles;
-
+    var newIndex = getPreviousTileIndex(openedModal);
     toggleDialog("hide", openedModal);
     toggleDialog("show", newIndex);
 }
 
 function modalNavigationLeft() {
-    var dialogParent = document.getElementById("memberDetailsModalBackground");
-    var numberOfTiles = dialogParent.querySelectorAll(":scope > div").length;
-    var newIndex = (openedModal + 1) % numberOfTiles;
+    var newIndex = getNextTileIndex(openedModal);
     toggleDialog("hide", openedModal);
     toggleDialog("show", newIndex);
 }
 
+function getPreviousTileIndex(index) {
+    var dialogParent = document.getElementById("memberDetailsModalBackground");
+    var numberOfTiles = dialogParent.querySelectorAll(":scope > div").length;
+    return ((index - 1) % numberOfTiles + numberOfTiles) % numberOfTiles;
+}
+
+function getNextTileIndex(index) {
+    var dialogParent = document.getElementById("memberDetailsModalBackground");
+    var numberOfTiles = dialogParent.querySelectorAll(":scope > div").length;
+    return (index + 1) % numberOfTiles;
+}
+
+function getModalByIndex(index) {
+    var dialogParent = document.getElementById("memberDetailsModalBackground");
+    return dialogParent.querySelectorAll(":scope > div")[index];
+}
 
 document.addEventListener("focus", function (event) {
-
-    var dialogParent = document.getElementById("memberDetailsModalBackground");
-    var d = dialogParent.querySelectorAll(":scope > div")[openedModal];
+    var d = getModalByIndex(openedModal);
 
     if (openedModal !== undefined && !d.contains(event.target)) {
         event.stopPropagation();
@@ -106,10 +108,10 @@ document.addEventListener("keydown", function (event) {
     if (openedModal !== undefined && event.code === "Escape") {
         toggleDialog('hide', openedModal);
     }
-    else if (openedModal !== undefined && event.code === "ArrowRight") {
+    else if (openedModal !== undefined && event.code === "ArrowLeft") {
         modalNavigationRight();
     }
-    else if (openedModal !== undefined && event.code === "ArrowLeft") {
+    else if (openedModal !== undefined && event.code === "ArrowRight") {
         modalNavigationLeft();
     }
 }, true);
