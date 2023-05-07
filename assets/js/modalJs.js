@@ -2,20 +2,23 @@ var lastFocus, dialog, closeButton, pagebackground;
 
 var openedModal = undefined;
 
-function toggleDialog(sh, modalId) {
-    console.log("modalId: " + modalId + " sh: " + sh);
+function toggleDialog(sh, index) {
+    var index = Number(index);
+
+    console.log("modalId: " + index + " sh: " + sh);
     dialogParent = document.getElementById("memberDetailsModalBackground");
-    dialog = document.getElementById(modalId);
+
+    dialog = dialogParent.querySelectorAll(":scope > div")[index];
     closeButton = dialog.getElementsByClassName("close-button")[0];
     pagebackground = document.getElementById("bg");
 
-    var numberOfTiles = dialogParent.children.length;
-    var index = Array.from(dialogParent.children).indexOf(dialog);
+    var numberOfTiles = dialogParent.querySelectorAll(":scope > div").length;
+    console.log(numberOfTiles);
 
     if (sh === "show") {
         lastFocus = document.activeElement;
 
-        openedModal = modalId;
+        openedModal = index;
 
         // show the dialog 
         dialog.style.display = 'block';
@@ -44,36 +47,53 @@ function toggleDialog(sh, modalId) {
 
 function displayPreviousTile(index, numberOfTiles) {
     var previousTileIndex = ((index - 1) % numberOfTiles + numberOfTiles) % numberOfTiles;
-    var previousTile = dialogParent.children[previousTileIndex];
+    var previousTile = dialogParent.querySelectorAll(":scope > div")[previousTileIndex];
     previousTile.classList.add("member-details-modal-content-right-preview");
     previousTile.style.display = "block";
 }
 
 function hidePreviousTile(index, numberOfTiles) {
     var previousTileIndex = ((index - 1) % numberOfTiles + numberOfTiles) % numberOfTiles;
-    var previousTile = dialogParent.children[previousTileIndex];
+    var previousTile = dialogParent.querySelectorAll(":scope > div")[previousTileIndex];
     previousTile.classList.remove("member-details-modal-content-right-preview");
     previousTile.style.display = "none";
 }
 
 function displayNextTile(index, numberOfTiles) {
     var nextTileIndex = (index + 1) % numberOfTiles;
-    var nextTile = dialogParent.children[nextTileIndex];
+    var nextTile = dialogParent.querySelectorAll(":scope > div")[nextTileIndex];
     nextTile.classList.add("member-details-modal-content-left-preview");
     nextTile.style.display = "block";
 }
 function hideNextTile(index, numberOfTiles) {
     var nextTileIndex = (index + 1) % numberOfTiles;
-    var nextTile = dialogParent.children[nextTileIndex];
+    var nextTile = dialogParent.querySelectorAll(":scope > div")[nextTileIndex];
     nextTile.classList.remove("member-details-modal-content-left-preview");
     nextTile.style.display = "none";
 }
 
+function modalNavigationRight() {
+    var dialogParent = document.getElementById("memberDetailsModalBackground");
+    var numberOfTiles = dialogParent.querySelectorAll(":scope > div").length;
+    var newIndex = ((openedModal - 1) % numberOfTiles + numberOfTiles) % numberOfTiles;
+
+    toggleDialog("hide", openedModal);
+    toggleDialog("show", newIndex);
+}
+
+function modalNavigationLeft() {
+    var dialogParent = document.getElementById("memberDetailsModalBackground");
+    var numberOfTiles = dialogParent.querySelectorAll(":scope > div").length;
+    var newIndex = (openedModal + 1) % numberOfTiles;
+    toggleDialog("hide", openedModal);
+    toggleDialog("show", newIndex);
+}
 
 
 document.addEventListener("focus", function (event) {
 
-    var d = document.getElementById(openedModal);
+    var dialogParent = document.getElementById("memberDetailsModalBackground");
+    var d = dialogParent.querySelectorAll(":scope > div")[openedModal];
 
     if (openedModal !== undefined && !d.contains(event.target)) {
         event.stopPropagation();
@@ -85,5 +105,11 @@ document.addEventListener("focus", function (event) {
 document.addEventListener("keydown", function (event) {
     if (openedModal !== undefined && event.code === "Escape") {
         toggleDialog('hide', openedModal);
+    }
+    else if (openedModal !== undefined && event.code === "ArrowRight") {
+        modalNavigationRight();
+    }
+    else if (openedModal !== undefined && event.code === "ArrowLeft") {
+        modalNavigationLeft();
     }
 }, true);

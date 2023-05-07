@@ -19,8 +19,9 @@
     {{ range $.Site.Data.about_us.members }}
 
       {{ $modalId := print "modal" ($.Scratch.Get "index") }}
+      {{ $index := ($.Scratch.Get "index") }}
 
-      <a href="#" onclick="toggleDialog('show', '{{ $modalId }}');">
+      <a href="#" onclick="toggleDialog('show', '{{ $index }}');">
         {{ $.Scratch.Get "index" }}
         {{ .name }}
         {{ .function }}
@@ -34,10 +35,12 @@
 </section>
 
 <div class="member-details-modal-background" id="memberDetailsModalBackground">
+  <a href="#" onclick="modalNavigationRight();" class="modal-navigation modal-navigation-right"></a>
   {{ $.Scratch.Set "index" 0 }}
   {{ range $.Site.Data.about_us.members }}
 
     {{ $modalId := print "modal" ($.Scratch.Get "index") }}
+    {{ $index := ($.Scratch.Get "index") }}
 
     <!--TODO: remove bg, move modals as siblings of the entire content -->
     <div tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="memberDetailsModal{{ $.Scratch.Get " index" }}"
@@ -45,11 +48,12 @@
       <div class="">
         <h3 id="memberDetailsModal{{ $.Scratch.Get " index" }}">Test {{ $.Scratch.Get "index" }}.</h3>
 
-        <button onclick="toggleDialog('hide', '{{ $modalId }}');" class="close-button">close</button>
+        <button onclick="toggleDialog('hide', '{{ $index }}');" class="close-button">close</button>
       </div>
     </div>
     {{ $.Scratch.Set "index" (add ($.Scratch.Get "index") 1) }}
   {{ end }}
+  <a href="#" onclick="modalNavigationLeft()" class="modal-navigation modal-navigation-left"></a>
 </div>
 
 {{ end }}
