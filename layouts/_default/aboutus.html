@@ -1,19 +1,43 @@
+{{ define "scriptImports" }}
+{{ $modalJs := resources.Get "js/modalJs.js" }}
+<script src="{{ ($modalJs).RelPermalink }}"></script>
+{{ end }}
+
+{{ define "additionalStyleImports" }}
+{{ $css := resources.Get "css/aboutus.css" }}
+<link rel="stylesheet" href="{{ ($css).RelPermalink }}">
+{{ end }}
+
 {{ define "main" }}
-<section class="section-row">
+<section class="section-row" id="bg">
 
   <h2>{{ .Content }}</h2>
 
   <div class="flex-container">
 
+    {{ $.Scratch.Set "index" 0 }}
     {{ range $.Site.Data.about_us.members }}
-      <a href="">
+
+      {{ $modalId := print "modal" ($.Scratch.Get "index") }}
+
+      <a href="#" onclick="toggleDialog('show', '{{ $modalId }}');">
+        {{ $.Scratch.Get "index" }}
         {{ .name }}
         {{ .function }}
         {{ .description | markdownify }}
       </a>
+
+      <!--TODO: remove bg, move modals as siblings of the entire content -->
+      <div tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="memberDetailsModal{{ $.Scratch.Get " index" }}"
+        id="{{ $modalId }}" class="member-details-modal">
+        <h3 id="memberDetailsModal{{ $.Scratch.Get " index" }}">Test {{ $.Scratch.Get "index" }}.</h3>
+
+        <button onclick="toggleDialog('hide', '{{ $modalId }}');" class="close-button">close</button>
+      </div>
+
+    {{ $.Scratch.Set "index" (add ($.Scratch.Get "index") 1) }}
     {{ end }}
 
   </div>
 </section>
 {{ end }}
-
