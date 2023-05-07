@@ -83,8 +83,7 @@ document.addEventListener("focus", function (event) {
 }, true);
 
 document.addEventListener("keydown", function (event) {
-    // ESC closes the opened dialog
-    if (openedModal !== undefined && event.keyCode == 27) {
+    if (openedModal !== undefined && event.code === "Escape") {
         toggleDialog('hide', openedModal);
     }
 }, true);
