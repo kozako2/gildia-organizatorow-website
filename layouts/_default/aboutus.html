@@ -23,9 +23,9 @@
 
       <div href="#" onclick="toggleDialog('show', '{{ $index }}');" class="member-tile">
 
-        {{ $image := resources.Get .photo }}
-        {{ with $image }}
-        <img src="{{ $image.RelPermalink }}" width="295" height="295">
+        {{ $altText := print .name }}
+        {{ with resources.Get .photo }}
+        <img src="{{ .RelPermalink }}" width="295" height="295" alt="{{ $altText }}">
         {{ end }}
 
         <h3 class="member-tile-title">{{ .name }}</h3>
@@ -40,9 +40,9 @@
 
 <div class="member-details-modal-background" id="memberDetailsModalBackground">
 
-  {{ $image := resources.Get "images/arrow_left.png" }}
-  {{ with $image }}
-    <img src="{{ $image.RelPermalink }}" width="40" height="40" onclick="modalNavigationLeft();" class="modal-navigation modal-navigation-left">
+  {{ with resources.Get "images/arrow_left.png" }}
+    <img src="{{ .RelPermalink }}" width="40" height="40" onclick="modalNavigationLeft();"
+      class="modal-navigation modal-navigation-left" alt="Przeglądaj w lewo">
   {{ end }}
 
   {{ $.Scratch.Set "index" 0 }}
@@ -56,15 +56,15 @@
       id="{{ $modalId }}" class="member-details-modal-content">
       <div class="member-details-modal-content-container">
 
-        {{ $image := resources.Get "images/cancel.png" }}
-        {{ with $image }}
-          <img src="{{ $image.RelPermalink }}" width="24" height="24" onclick="toggleDialog('hide', '{{ $index }}');" class="close-button">
+        {{ with resources.Get "images/cancel.png" }}
+          <img src="{{ .RelPermalink }}" width="24" height="24" onclick="toggleDialog('hide', '{{ $index }}');"
+            class="close-button" alt="Cofnij">
         {{ end }}
 
         <div class="member-details-modal-content-image-container">
-          {{ $image := resources.Get .photo }}
-          {{ with $image }}
-          <img src="{{ $image.RelPermalink }}" width="295" height="295">
+          {{ $altText := print .name }}
+          {{ with resources.Get .photo }}
+            <img src="{{ .RelPermalink }}" width="295" height="295" alt="{{ $altText }}">
           {{ end }}
         </div>
 
@@ -80,9 +80,9 @@
     {{ $.Scratch.Set "index" (add ($.Scratch.Get "index") 1) }}
   {{ end }}
 
-  {{ $image := resources.Get "images/arrow_right.png" }}
-  {{ with $image }}
-    <img src="{{ $image.RelPermalink }}" width="40" height="40" onclick="modalNavigationRight()" class="modal-navigation modal-navigation-right">
+  {{ with resources.Get "images/arrow_right.png" }}
+    <img src="{{ .RelPermalink }}" width="40" height="40" onclick="modalNavigationRight()"
+      class="modal-navigation modal-navigation-right" alt="Przeglądaj w prawo">
   {{ end }}
 
 </div>
