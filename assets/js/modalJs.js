@@ -1,16 +1,15 @@
-var lastFocus, dialog, closeButton, pagebackground;
+var lastFocus, dialog, closeButton;
 
 var openedModal = undefined;
 
 function toggleDialog(sh, index) {
     var index = Number(index);
 
-    console.log("modalId: " + index + " sh: " + sh);
     dialogParent = document.getElementById("memberDetailsModalBackground");
 
     dialog = dialogParent.querySelectorAll(":scope > div")[index];
     closeButton = dialog.getElementsByClassName("close-button")[0];
-    pagebackground = document.getElementById("bg");
+    var pageBody = document.querySelector("body");
 
     if (sh === "show") {
         lastFocus = document.activeElement;
@@ -29,7 +28,7 @@ function toggleDialog(sh, index) {
         closeButton.focus();
 
         // only hide the background *after* you've moved focus out of the content that will be "hidden"
-        pagebackground.setAttribute("aria-hidden", "true");
+        pageBody.setAttribute("aria-hidden", "true");
 
     } else {
         hidePreviousTile(index);
@@ -37,7 +36,7 @@ function toggleDialog(sh, index) {
         openedModal = undefined;
         dialog.classList.remove("member-details-modal-content-opened");
         dialogParent.style.display = 'none';
-        pagebackground.setAttribute("aria-hidden", "false");
+        pageBody.setAttribute("aria-hidden", "false");
         lastFocus.focus();
     }
 }
