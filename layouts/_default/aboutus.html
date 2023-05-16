@@ -9,7 +9,7 @@
 {{ end }}
 
 {{ define "main" }}
-<section class="section-row" id="bg">
+<section class="section-row">
 
   <p class="page-description">Za organizacją każdej naszej realizacji stoją ludzie - My. :) Poznaj nas bliżej!</p>
 
@@ -51,7 +51,7 @@
     {{ $modalId := print "modal" ($.Scratch.Get "index") }}
     {{ $index := ($.Scratch.Get "index") }}
 
-    <!--TODO: remove bg, move modals as siblings of the entire content -->
+    <!--TODO: move modals as siblings of the entire content -->
     <div tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="memberDetailsModal{{ $.Scratch.Get " index" }}"
       id="{{ $modalId }}" class="member-details-modal-content">
       <div class="member-details-modal-content-container">
