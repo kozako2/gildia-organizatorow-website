@@ -148,31 +148,3 @@ footer>div {
 
     }
 }
-
-.flex-container {
-    margin: 0 auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    align-content: space-between;
-    gap: var(--grid-gap);
-}
-
-.flex-container::after {
-    content: "";
-    flex-basis: 380px;
-}
-
-.flex-container>a {
-    display: block;
-    text-decoration: none;
-    height: 460px;
-    width: 380px;
-    border-radius: 20px;
-
-    color: var(---blackblack);
-    background-color: var(--white);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
