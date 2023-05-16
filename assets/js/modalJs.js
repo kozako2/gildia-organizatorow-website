@@ -61,13 +61,13 @@ function hideNextTile(index) {
     nextTile.classList.remove("member-details-modal-content-left-preview");
 }
 
-function modalNavigationRight() {
+function modalNavigationLeft() {
     var newIndex = getPreviousTileIndex(openedModal);
     toggleDialog("hide", openedModal);
     toggleDialog("show", newIndex);
 }
 
-function modalNavigationLeft() {
+function modalNavigationRight() {
     var newIndex = getNextTileIndex(openedModal);
     toggleDialog("hide", openedModal);
     toggleDialog("show", newIndex);
