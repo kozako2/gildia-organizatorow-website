@@ -56,6 +56,11 @@
       id="{{ $modalId }}" class="member-details-modal-content">
       <div class="member-details-modal-content-container">
 
+        {{ $image := resources.Get "images/cancel.png" }}
+        {{ with $image }}
+          <img src="{{ $image.RelPermalink }}" width="24" height="24" onclick="toggleDialog('hide', '{{ $index }}');" class="close-button">
+        {{ end }}
+
         <div class="member-details-modal-content-image-container">
           {{ $image := resources.Get .photo }}
           {{ with $image }}
@@ -70,7 +75,6 @@
           <p>{{ .description | markdownify }}</p>
         </div>
 
-        <!--<button onclick="toggleDialog('hide', '{{ $index }}');" class="close-button">close</button>-->
       </div>
     </div>
     {{ $.Scratch.Set "index" (add ($.Scratch.Get "index") 1) }}
