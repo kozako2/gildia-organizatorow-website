@@ -18,7 +18,7 @@ function toggleDialog(sh, index) {
         openedModal = index;
 
         // show the dialog 
-        dialog.style.display = 'block';
+        dialog.classList.add("member-details-modal-content-opened");
         dialogParent.style.display = 'block';
 
         // siblings on the left and right
@@ -35,7 +35,7 @@ function toggleDialog(sh, index) {
         hidePreviousTile(index);
         hideNextTile(index);
         openedModal = undefined;
-        dialog.style.display = 'none';
+        dialog.classList.remove("member-details-modal-content-opened");
         dialogParent.style.display = 'none';
         pagebackground.setAttribute("aria-hidden", "false");
         lastFocus.focus();
@@ -45,24 +45,20 @@ function toggleDialog(sh, index) {
 function displayPreviousTile(index) {
     var previousTile = getModalByIndex(getPreviousTileIndex(index));
     previousTile.classList.add("member-details-modal-content-right-preview");
-    previousTile.style.display = "block";
 }
 
 function hidePreviousTile(index) {
     var previousTile = getModalByIndex(getPreviousTileIndex(index));
     previousTile.classList.remove("member-details-modal-content-right-preview");
-    previousTile.style.display = "none";
 }
 
 function displayNextTile(index) {
     var nextTile = getModalByIndex(getNextTileIndex(index));
     nextTile.classList.add("member-details-modal-content-left-preview");
-    nextTile.style.display = "block";
 }
 function hideNextTile(index) {
     var nextTile = getModalByIndex(getNextTileIndex(index));
     nextTile.classList.remove("member-details-modal-content-left-preview");
-    nextTile.style.display = "none";
 }
 
 function modalNavigationRight() {
