@@ -105,9 +105,9 @@ document.addEventListener("keydown", function (event) {
         toggleDialog('hide', openedModal);
     }
     else if (openedModal !== undefined && event.code === "ArrowLeft") {
-        modalNavigationRight();
+        modalNavigationLeft();
     }
     else if (openedModal !== undefined && event.code === "ArrowRight") {
-        modalNavigationLeft();
+        modalNavigationRight();
     }
 }, true);
