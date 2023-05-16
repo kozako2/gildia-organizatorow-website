@@ -21,12 +21,16 @@
       {{ $modalId := print "modal" ($.Scratch.Get "index") }}
       {{ $index := ($.Scratch.Get "index") }}
 
-      <a href="#" onclick="toggleDialog('show', '{{ $index }}');">
-        {{ $.Scratch.Get "index" }}
-        {{ .name }}
-        {{ .function }}
-        {{ .description | markdownify }}
-      </a>
+      <div href="#" onclick="toggleDialog('show', '{{ $index }}');" class="member-tile">
+
+        {{ $image := resources.Get .photo }}
+        {{ with $image }}
+        <img src="{{ $image.RelPermalink }}" width="295" height="295">
+        {{ end }}
+
+        <h3 class="member-tile-title">{{ .name }}</h3>
+        <h4 class="member-tile-subtitle">{{ .function }}</h4>
+      </div>
 
       {{ $.Scratch.Set "index" (add ($.Scratch.Get "index") 1) }}
     {{ end }}
@@ -45,10 +49,23 @@
     <!--TODO: remove bg, move modals as siblings of the entire content -->
     <div tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="memberDetailsModal{{ $.Scratch.Get " index" }}"
       id="{{ $modalId }}" class="member-details-modal-content">
-      <div class="">
-        <h3 id="memberDetailsModal{{ $.Scratch.Get " index" }}">Test {{ $.Scratch.Get "index" }}.</h3>
+      <div class="member-details-modal-content-container">
 
-        <button onclick="toggleDialog('hide', '{{ $index }}');" class="close-button">close</button>
+        <div class="member-details-modal-content-image-container">
+          {{ $image := resources.Get .photo }}
+          {{ with $image }}
+          <img src="{{ $image.RelPermalink }}" width="295" height="295">
+          {{ end }}
+        </div>
+
+        <div>
+          <h3 class="member-tile-title">{{ .name }}</h3>
+          <h4 class="member-tile-subtitle">{{ .function }}</h4>
+
+          <p>{{ .description | markdownify }}</p>
+        </div>
+
+        <!--<button onclick="toggleDialog('hide', '{{ $index }}');" class="close-button">close</button>-->
       </div>
     </div>
     {{ $.Scratch.Set "index" (add ($.Scratch.Get "index") 1) }}
