@@ -1,0 +1,90 @@
+{{ define "scriptImports" }}
+{{ $modalJs := resources.Get "js/modalJs.js" }}
+<script src="{{ ($modalJs).RelPermalink }}"></script>
+{{ end }}
+
+{{ define "additionalStyleImports" }}
+{{ $css := resources.Get "css/aboutus.css" }}
+<link rel="stylesheet" href="{{ ($css).RelPermalink }}">
+{{ end }}
+
+{{ define "main" }}
+<section class="section-row">
+
+  <p class="page-description">Za organizacją każdej naszej realizacji stoją ludzie - My. :) Poznaj nas bliżej!</p>
+
+  <div class="flex-container">
+
+    {{ $.Scratch.Set "index" 0 }}
+    {{ range $.Site.Data.about_us.members }}
+
+      {{ $modalId := print "modal" ($.Scratch.Get "index") }}
+      {{ $index := ($.Scratch.Get "index") }}
+
+      <div href="#" onclick="toggleDialog('show', '{{ $index }}');" class="member-tile">
+
+        {{ $altText := print .name }}
+        {{ with resources.Get .photo }}
+        <img src="{{ .RelPermalink }}" width="295" height="295" alt="{{ $altText }}">
+        {{ end }}
+
+        <h3 class="member-tile-title">{{ .name }}</h3>
+        <h4 class="member-tile-subtitle">{{ .function }}</h4>
+      </div>
+
+      {{ $.Scratch.Set "index" (add ($.Scratch.Get "index") 1) }}
+    {{ end }}
+
+  </div>
+</section>
+
+<div class="member-details-modal-background" id="memberDetailsModalBackground">
+
+  {{ with resources.Get "images/arrow_left.png" }}
+    <img src="{{ .RelPermalink }}" width="40" height="40" onclick="modalNavigationLeft();"
+      class="modal-navigation modal-navigation-left" alt="Przeglądaj w lewo">
+  {{ end }}
+
+  {{ $.Scratch.Set "index" 0 }}
+  {{ range $.Site.Data.about_us.members }}
+
+    {{ $modalId := print "modal" ($.Scratch.Get "index") }}
+    {{ $index := ($.Scratch.Get "index") }}
+
+    <!--TODO: move modals as siblings of the entire content -->
+    <div tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="memberDetailsModal{{ $.Scratch.Get " index" }}"
+      id="{{ $modalId }}" class="member-details-modal-content">
+      <div class="member-details-modal-content-container">
+
+        {{ with resources.Get "images/cancel.png" }}
+          <img src="{{ .RelPermalink }}" width="24" height="24" onclick="toggleDialog('hide', '{{ $index }}');"
+            class="close-button" alt="Cofnij">
+        {{ end }}
+
+        <div class="member-details-modal-content-image-container">
+          {{ $altText := print .name }}
+          {{ with resources.Get .photo }}
+            <img src="{{ .RelPermalink }}" width="295" height="295" alt="{{ $altText }}">
+          {{ end }}
+        </div>
+
+        <div>
+          <h3 class="member-tile-title">{{ .name }}</h3>
+          <h4 class="member-tile-subtitle">{{ .function }}</h4>
+
+          <p>{{ .description | markdownify }}</p>
+        </div>
+
+      </div>
+    </div>
+    {{ $.Scratch.Set "index" (add ($.Scratch.Get "index") 1) }}
+  {{ end }}
+
+  {{ with resources.Get "images/arrow_right.png" }}
+    <img src="{{ .RelPermalink }}" width="40" height="40" onclick="modalNavigationRight()"
+      class="modal-navigation modal-navigation-right" alt="Przeglądaj w prawo">
+  {{ end }}
+
+</div>
+
+{{ end }}

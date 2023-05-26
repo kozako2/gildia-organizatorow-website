@@ -3,7 +3,10 @@
     --white: #F4F4F4;
     --gray1: #272727;
     --black: #0F0F0F;
+    --blackblack: #000000;
     --green: #095326;
+
+    --grid-gap: 45px;
 }
 
 .main-container {
@@ -15,30 +18,29 @@
     min-height: 100vh;
 }
 
-.main-container>.main-item {
+.section-row {
     width: 100%;
     padding-top: 1em;
     padding-bottom: 1em;
 }
 
-.main-container>.main-item:nth-child(2n+1) {
-    color: var(--white);
-    background-color: var(--gray1);
-}
-
-.main-container>.main-item:nth-child(2n) {
-    color: var(--black);
-    background-color: var(--white);
-}
-
-.main-container>.main-item>div {
-
+.section-row-content {
     max-width: var(--container-max-width);
     margin: 0 auto;
     padding: 0 2em;
 }
 
-.main-container>.main-item:nth-last-child(2) {
+.gray-background-row {
+    color: var(--white);
+    background-color: var(--gray1);
+}
+
+.white-background-row {
+    color: var(--black);
+    background-color: var(--white);
+}
+
+.main-container>.section-row:nth-last-child(2) {
     /* Make space for proper footer */
     flex-grow: 1;
 }

@@ -1,0 +1,10 @@
+<footer>
+    <div>
+        <h1 class="footer-container">
+            {{ $image := resources.Get "images/GILDIA_LOGO_MONO_WHITE.svg" }}
+            {{ with $image }}
+            <img src="{{ .RelPermalink }}" class="footer-image" alt="Gildia organizatorów logo - białe">
+            {{ end }}
+        </h1>
+    </div>
+</footer>

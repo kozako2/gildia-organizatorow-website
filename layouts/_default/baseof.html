@@ -11,18 +11,27 @@
 
 
     {{ $css := resources.Get "css/main.css" }}
-
     <link rel="stylesheet" href="{{ ($css).RelPermalink }}">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
     <link href="https://fonts.cdnfonts.com/css/capsuula" rel="stylesheet">
+    {{ block "additionalStyleImports" . }}{{ end }}
+
+    {{ block "scriptImports" . }}{{ end }}
 
 </head>
 
 <body>
     <!-- Code that all your templates share, like a header -->
-    {{ block "main" . }}
-    <!-- The part of the page that begins to differ between templates -->
-    {{ end }}
+    {{ partial "header.html" . }}
+
+    <main aria-role="main" class="main-container">
+        {{ block "main" . }}
+        <!-- The part of the page that begins to differ between templates -->
+        {{ end }}
+    </main>
+
+    {{ partial "footer.html" . }}
+
 </body>
 
 </html>
