@@ -124,12 +124,40 @@ footer>div {
 
     flex-wrap: wrap;
 
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    flex-direction: column;
+}
+
+.landing-page-projects-container figure {
+    width: 100%;
+    margin: 0;
 }
 
 .landing-page-projects-container img {
-    max-height: 360px;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.landing-page-projects-container figcaption {
+    padding-top: 12px;
+    text-transform: uppercase;
+
+}
+
+@media (min-width: 768px) {
+    .landing-page-projects-container {
+        flex-direction: row;
+    }
+
+    .landing-page-projects-container figure {
+        width: 48%;
+    }
+
+    .landing-page-projects-container figcaption {
+        padding-top: 32px;
+
+    }
 }
 
 .footer-container {
