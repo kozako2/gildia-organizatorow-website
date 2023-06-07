@@ -1,9 +1,5 @@
 <div class="landing-page-layout-with-image-container">
 
-    <div>
-        {{ .Content }}
-    </div>
-
     <div class="image-grid-container">
         {{ $image := .Resources.GetMatch "A" }}
         {{ with $image }}
@@ -17,6 +13,10 @@
         {{ with $image }}
         <img src="{{ .RelPermalink }}" style="grid-area: C">
         {{ end }}
+    </div>
+
+    <div>
+        {{ .Content }}
     </div>
 
 </div>
