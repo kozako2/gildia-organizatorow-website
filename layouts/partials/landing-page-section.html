@@ -1,10 +1,22 @@
-{{ $image_place_class := cond (default false .Params.images_on_right) "image-on-right" "image-on-left" }}
-<div class="landing-page-layout-with-image-container {{$image_place_class}}">
-    {{ $image := .Resources.GetMatch "images/*.svg" }}
-    {{ with $image }}
-    <img src="{{ .RelPermalink }}">
-    {{ end }}
+<div class="landing-page-layout-with-image-container">
+
     <div>
         {{ .Content }}
     </div>
+
+    <div class="image-grid-container">
+        {{ $image := .Resources.GetMatch "A" }}
+        {{ with $image }}
+        <img src="{{ .RelPermalink }}" style="grid-area: A">
+        {{ end }}
+        {{ $image := .Resources.GetMatch "B" }}
+        {{ with $image }}
+        <img src="{{ .RelPermalink }}" style="grid-area: B">
+        {{ end }}
+        {{ $image := .Resources.GetMatch "C" }}
+        {{ with $image }}
+        <img src="{{ .RelPermalink }}" style="grid-area: C">
+        {{ end }}
+    </div>
+
 </div>
