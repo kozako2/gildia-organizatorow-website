@@ -11,6 +11,8 @@ resources:
 - name: C
   title: C
   src: images/C.jpg
+ctamessage: Przejdź na stronę
+ctaurl: https://www.facebook.com/LesnicaBliska
 ---
 
 ### Parki ESK w Leśnicy
