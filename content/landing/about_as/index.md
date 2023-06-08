@@ -1,8 +1,17 @@
 ---
 title: A new post with the filename old-post.md
 resources:
-- title: Header image
-  src: images/logo.svg
+- name: A
+  title: A
+  src: images/A.jpg
+- name: B
+  title: B
+  src: images/B.jpg
+- name: C
+  title: C
+  src: images/C.jpg
+ctamessage: Poznaj nas!
+ctaurl: /about-us/
 ---
 
 ## KIM JESTEŚMY?
