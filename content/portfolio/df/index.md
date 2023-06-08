@@ -11,6 +11,8 @@ resources:
 - name: C
   title: C
   src: images/C.jpg
+ctamessage: Przejdź na stronę
+ctaurl: https://dnifantastyki.pl/
 ---
 
 ### Dni Fantastyki
