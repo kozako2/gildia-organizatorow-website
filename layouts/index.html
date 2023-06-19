@@ -18,25 +18,18 @@
 
         <div class="landing-page-projects-container">
             <div class="landing-page-project">
-                {{ $image := resources.Get "images/projekt_df.png" }}
-                {{ with $image }}
-                <div class="landing-page-projects-tile" style="background-image: url('{{ .RelPermalink }}');">
+                <div class="landing-page-projects-tile landing-page-projects-tile-df">
                     <a href='{{ "portfolio" | relURL }}' class="action-button">Poznaj nas!</a>
                 </div>
-                {{ end }}
                 <div>
                     <h2>Dni Fantastyki</h2>
                 </div>
             </div>
 
             <div class="landing-page-project">
-                {{ $image := resources.Get "images/projekt_lesnica_park.png" }}
-                {{ with $image }}
-
-                <div class="landing-page-projects-tile" style="background-image: url('{{ .RelPermalink }}');">
+                <div class="landing-page-projects-tile landing-page-projects-tile-esk">
                     <a href='{{ "portfolio" | relURL }}' class="action-button">Poznaj nas!</a>
                 </div>
-                {{ end }}
                 <div>
                     <h2>Park ESK w Leśnicy</h2>
                 </div>
