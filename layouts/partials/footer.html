@@ -1,10 +1,14 @@
 <footer>
-    <div>
-        <h1 class="footer-container">
+    <div class="section-row-content">
+        <div class="footer-container">
             {{ $image := resources.Get "images/GILDIA_LOGO_MONO_WHITE.svg" }}
             {{ with $image }}
             <img src="{{ .RelPermalink }}" class="footer-image" alt="Gildia organizatorów logo - białe">
             {{ end }}
-        </h1>
+            <p class="footer-middle-section">Gildia Organizatorów<br />KRS 0001041417</p>
+            <p class="footer-right-section">Jesteś zainteresowany współpracą z nami?<br /><strong>Napisz do
+                    nas!</strong><br /><a href="mailto:gildiaorganizatorow@gmail.com">gildiaorganizatorow@gmail.com</a>
+            </p>
+        </div>
     </div>
 </footer>

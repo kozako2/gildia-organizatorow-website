@@ -67,20 +67,6 @@ figcaption {
     font-size: x-large;
 }
 
-footer {
-    width: 100%;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    color: var(--white);
-    background-color: var(--green);
-}
-
-footer>div {
-    max-width: var(--container-max-width);
-    margin: 0 auto;
-    padding: 0 2em;
-}
-
 .header-container {
     display: flex;
     align-items: center;
@@ -159,13 +145,57 @@ footer>div {
     object-fit: contain;
 }
 
-.footer-container {
-    display: flex;
-    align-items: center;
+
+footer {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    color: var(--white);
+    background-color: var(--green);
 }
 
-.footer-container>.footer-image {
-    height: 3em;
+footer a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+
+.footer-container {
+    padding: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer-image {
+    display: block;
+    width: 25%;
+}
+
+.footer-container>* {
+    text-align: start;
+    width: 100%
+}
+
+@media (min-width: 768px) {
+    .footer-container {
+        flex-direction: row;
+    }
+
+    .footer-container>* {
+        width: 33%
+    }
+
+    .footer-middle-section {
+        text-align: center;
+    }
+
+    .footer-right-section {
+        text-align: end;
+    }
+
 }
 
 .action-button {
