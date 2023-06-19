@@ -1,16 +1,24 @@
 <header class="section-row gray-background-row">
     <div class="section-row-content">
-
-        <h1 class="header-container">
+        <div class="header-container">
             {{ $image := resources.Get "images/GILDIA_LOGO_COLOR_WHITE_TEXT.svg" }}
             {{ with $image }}
-            <img src="{{ .RelPermalink }}" class="header-image" alt="Gildia organizatorów logo">
+            <a href="/" class="header-image-container">
+                <img src="{{ .RelPermalink }}" class="header-image" alt="Gildia organizatorów logo">
+            </a>
             {{ end }}
-            {{/* <span class="header-text-content">{{.Title}}</span> */}}
-        </h1>
 
-        {{ with .Params.subtitle }}
-        <span class="subtitle">{{.}}</span>
-        {{ end }}
+            <nav class="main-menu">
+                <ul role="menu" aria-label="Naqigacja strony">
+                    <li>
+                        <a href='{{ "about-us" | relURL }}' role="menuitem">O nas</a>
+                    </li>
+                    <li>
+                        <a href='{{ "portfolio" | relURL }}' role="menuitem">Portfolio</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
     </div>
 </header>
