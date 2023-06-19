@@ -69,15 +69,44 @@ figcaption {
 
 .header-container {
     display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-between;
     align-items: center;
+    flex-direction: column;
 }
 
-.header-container>.header-image {
-    height: 3em;
+.header-image-container {
+    display: block;
+    width: 33%;
 }
 
-.header-container>.header-text-content {
-    padding-left: 2ex;
+.header-image {
+    display: block;
+    width: 100%;
+}
+
+.main-menu {
+    font-size: 1.4rem;
+}
+
+.main-menu li {
+    display: inline-block;
+    padding-left: 2rem;
+}
+
+.main-menu a {
+    text-decoration: none;
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+
+@media (min-width: 768px) {
+    .header-container {
+        flex-direction: row;
+    }
+
 }
 
 .landing-page-layout-with-image-container {
