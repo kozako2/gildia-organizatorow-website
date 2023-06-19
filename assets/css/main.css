@@ -215,7 +215,6 @@ footer>div {
 
 .landing-page-project {
     width: 100%;
-
 }
 
 .landing-page-projects-tile {
@@ -229,6 +228,32 @@ footer>div {
     justify-content: center;
     align-items: center;
 }
+
+.landing-page-projects-tile-df {
+    background-image: url('/images/projekt_df.png');
+}
+
+.landing-page-projects-tile-df:hover {
+    background: linear-gradient(rgba(39, 39, 39, 0.45),
+            rgba(39, 39, 39, 0.45)), url('/images/projekt_df.png');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.landing-page-projects-tile-esk {
+    background-image: url('/images/projekt_lesnica_park.png');
+}
+
+.landing-page-projects-tile-esk:hover {
+    background: linear-gradient(rgba(39, 39, 39, 0.45),
+            rgba(39, 39, 39, 0.45)), url('/images/projekt_lesnica_park.png');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
 
 @media (min-width: 768px) {
     .landing-page-projects-container {
