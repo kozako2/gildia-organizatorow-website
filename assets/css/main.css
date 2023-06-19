@@ -215,6 +215,8 @@ footer>div {
 
 .landing-page-project {
     width: 100%;
+    display: block;
+    text-decoration: none;
 }
 
 .landing-page-projects-tile {
