@@ -20,8 +20,8 @@
 
 .section-row {
     width: 100%;
-    padding-top: 1em;
-    padding-bottom: 1em;
+    padding-top: 2em;
+    padding-bottom: 2em;
 }
 
 .section-row-content {
@@ -58,6 +58,7 @@ h3 {
     color: var(--green);
     font-family: 'Capsuula', sans-serif;
     font-weight: 400;
+    text-transform: uppercase;
 }
 
 figcaption {
@@ -66,31 +67,46 @@ figcaption {
     font-size: x-large;
 }
 
-footer {
-    width: 100%;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    color: var(--white);
-    background-color: var(--green);
-}
-
-footer>div {
-    max-width: var(--container-max-width);
-    margin: 0 auto;
-    padding: 0 2em;
-}
-
 .header-container {
     display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-between;
     align-items: center;
+    flex-direction: column;
 }
 
-.header-container>.header-image {
-    height: 3em;
+.header-image-container {
+    display: block;
+    width: 33%;
 }
 
-.header-container>.header-text-content {
-    padding-left: 2ex;
+.header-image {
+    display: block;
+    width: 100%;
+}
+
+.main-menu {
+    font-size: 1.4rem;
+}
+
+.main-menu li {
+    display: inline-block;
+    padding-left: 2rem;
+}
+
+.main-menu a {
+    text-decoration: none;
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+
+@media (min-width: 768px) {
+    .header-container {
+        flex-direction: row;
+    }
+
 }
 
 .landing-page-layout-with-image-container {
@@ -98,53 +114,215 @@ footer>div {
 
     flex-wrap: nowrap;
 
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    gap: 36px;
+    flex-direction: column;
 }
 
-.landing-page-layout-with-image-container.image-on-left {
-    flex-direction: row;
+@media (min-width: 992px) {
+    .landing-page-layout-with-image-container {
+        flex-direction: row;
+    }
+
+    .section-row:nth-of-type(odd) .landing-page-layout-with-image-container {
+        flex-direction: row-reverse;
+    }
+
+    .landing-page-layout-with-image-container>div {
+        max-width: 50%;
+    }
+
+    .logo-background .section-row-content .landing-page-layout-with-image-container {
+        flex-direction: row;
+
+    }
 }
 
-.landing-page-layout-with-image-container.image-on-right {
-    flex-direction: row-reverse;
+.section-row:nth-of-type(even) {
+    background-color: var(--gray1);
+    color: var(--white);
+}
+
+.section-row:nth-of-type(even) h3,
+.section-row:nth-of-type(even) h2 {
+    color: var(--white);
+}
+
+.landing-page-layout-with-image-container h3 {
+    font-size: x-large;
+    text-transform: uppercase;
+}
+
+.image-grid-container {
+    display: grid;
+    grid-template-areas:
+        "A B"
+        "A  C";
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 51% 1fr;
+    gap: 12px;
 }
 
 
-.landing-page-layout-with-image-container img {
-    max-width: 360px;
+.image-grid-container img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    object-fit: contain;
 }
 
-.landing-page-layout-with-image-container div {
-    max-width: 50%;
+
+footer {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    color: var(--white);
+    background-color: var(--green);
 }
+
+footer a {
+    color: var(--white);
+    text-decoration: none;
+}
+
+
+.footer-container {
+    padding: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer-image {
+    display: block;
+    width: 25%;
+}
+
+.footer-container>* {
+    text-align: start;
+    width: 100%
+}
+
+@media (min-width: 768px) {
+    .footer-container {
+        flex-direction: row;
+    }
+
+    .footer-container>* {
+        width: 33%
+    }
+
+    .footer-middle-section {
+        text-align: center;
+    }
+
+    .footer-right-section {
+        text-align: end;
+    }
+
+}
+
+.action-button {
+    background: linear-gradient(90deg, #095326 0%, #1A9049 100%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 7px;
+
+    color: var(--white);
+    display: inline-block;
+    padding: 0.7rem 0.7rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.9s;
+}
+
+.action-button:after {
+    content: '';
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.action-button:hover {
+    padding-right: 16px;
+}
+
+.action-button:hover:after {
+    content: '→';
+    display: inline-block;
+    padding-left: 8px;
+    opacity: 1;
+}
+
+.logo-background {
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
 
 .landing-page-projects-container {
     display: flex;
-
     flex-wrap: wrap;
 
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    flex-direction: column;
 }
 
-.landing-page-projects-container img {
-    max-height: 360px;
+.landing-page-project {
+    width: 100%;
+    display: block;
+    text-decoration: none;
 }
 
-.footer-container {
+.landing-page-projects-tile {
+    aspect-ratio: 858/655;
+    width: 100%;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-.footer-container>.footer-image {
-    height: 3em;
+.landing-page-projects-tile-df {
+    background-image: url('/images/projekt_df.png');
 }
 
-@media (max-width: 1000px) {
-    .landing-page-layout-with-image-container {
+.landing-page-projects-tile-df:hover {
+    background: linear-gradient(rgba(39, 39, 39, 0.45),
+            rgba(39, 39, 39, 0.45)), url('/images/projekt_df.png');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
 
-        flex-wrap: wrap;
+.landing-page-projects-tile-esk {
+    background-image: url('/images/projekt_lesnica_park.png');
+}
+
+.landing-page-projects-tile-esk:hover {
+    background: linear-gradient(rgba(39, 39, 39, 0.45),
+            rgba(39, 39, 39, 0.45)), url('/images/projekt_lesnica_park.png');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+
+@media (min-width: 768px) {
+    .landing-page-projects-container {
+        flex-direction: row;
+    }
+
+    .landing-page-project {
+        width: 49%;
 
     }
 }
