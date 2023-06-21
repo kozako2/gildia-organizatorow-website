@@ -9,11 +9,15 @@
             {{ end }}
 
             <nav class="main-menu">
-                <ul role="menu" aria-label="Naqigacja strony">
-                    <li>
+                <a id="menubutton" onclick="toggleMobileMenu();" aria-haspopup="true" aria-controls="menu">
+                    <img src="/images/hamburger.svg" alt="Menu" />
+                </a>
+                <ul id="menu" class="main-menu-list" role="menu" aria-label="Naqigacja strony"
+                    aria-labelledby="menubutton">
+                    <li role="presentation">
                         <a href='{{ "about-us" | relURL }}' role="menuitem">O nas</a>
                     </li>
-                    <li>
+                    <li role="presentation">
                         <a href='{{ "portfolio" | relURL }}' role="menuitem">Portfolio</a>
                     </li>
                 </ul>
