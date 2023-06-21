@@ -11,7 +11,7 @@ resources:
   title: C
   src: images/C.jpg
 ctamessage: Poznaj nas!
-ctaurl: /about-us/
+ctaurl: /o-nas/
 ---
 
 ## KIM JESTEŚMY?
