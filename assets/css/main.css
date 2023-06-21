@@ -208,6 +208,10 @@ footer a {
     width: 100%
 }
 
+.footer-middle-section {
+    font-style: normal;
+}
+
 @media (min-width: 768px) {
     .footer-container {
         flex-direction: row;
