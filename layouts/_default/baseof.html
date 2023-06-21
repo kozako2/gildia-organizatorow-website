@@ -18,6 +18,8 @@
     <link href="https://fonts.cdnfonts.com/css/capsuula" rel="stylesheet">
     {{ block "additionalStyleImports" . }}{{ end }}
 
+    {{ $mainJs := resources.Get "js/main.js" }}
+    <script src="{{ ($mainJs).RelPermalink }}"></script>
     {{ block "scriptImports" . }}{{ end }}
 
 </head>

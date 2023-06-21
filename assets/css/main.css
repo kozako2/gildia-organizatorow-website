@@ -73,7 +73,7 @@ figcaption {
 
     justify-content: space-between;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row-reverse;
 }
 
 .header-image-container {
@@ -90,9 +90,30 @@ figcaption {
     font-size: 1.4rem;
 }
 
-.main-menu li {
-    display: inline-block;
-    padding-left: 2rem;
+.main-menu-list {
+    list-style-type: none;
+
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 6rem;
+    width: 90%;
+    margin: 0;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+    background-color: var(--black);
+    opacity: 0.9;
+    overflow: auto;
+}
+
+.main-menu-mobile-open {
+    display: block;
+}
+
+.main-menu-list li {
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
 }
 
 .main-menu a {
@@ -105,6 +126,32 @@ figcaption {
 @media (min-width: 768px) {
     .header-container {
         flex-direction: row;
+    }
+
+    .main-menu-list {
+        display: block;
+
+        position: initial;
+        left: unset;
+        top: unset;
+        width: 100%;
+        margin: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+
+        background-color: unset;
+        opacity: 1;
+    }
+
+    .main-menu-list li {
+        display: inline-block;
+        padding-left: 2rem;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    #menubutton {
+        display: none;
     }
 
 }
