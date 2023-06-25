@@ -49,7 +49,10 @@ members:
     photo: images/members/Joanna_Kubizna_Stowarzyszenie_Gildia_Organizatorow.png
   - name: Jakub Kozerski
     function: Członek Komisji Rewizyjnej
-    description: 
+    description: >
+      Absolwent Informatyki na Politechnice Wrocławskiej. Zaciągnięty do fandomu jeszcze w gimnazjum jako gracz i uczestnik.
+      Od czasów studenckich pomaga przy Dni Fantastyki, jako organizator do spraw programu.
+      Fan Kotów, Lego (co jest trudne do pogodzenia) i szeroko pojętej nauki. W "wolnym" czasie pcha rozwój sztucznej inteligencji do przodu.
     photo: images/members/Jakub_Kozerski_Stowarzyszenie_Gildia_Organizatorow.png
   - name: Agnieszka Jamroszczak
     function: Koordynator Projektów
