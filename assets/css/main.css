@@ -524,3 +524,7 @@ footer a {
     }
 
 }
+
+.section-row-full-height {
+    flex-grow: 1;
+}
