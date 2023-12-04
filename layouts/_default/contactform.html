@@ -1,0 +1,83 @@
+{{ define "main" }}
+
+
+{{ range where site.RegularPages "Type" "kontakt" }}
+<section class="section-row white-background-row">
+    <div class="section-row-content">
+        {{ partial "landing-page-section.html" . }}
+    </div>
+</section>
+{{ end }}
+
+
+
+<section class="section-row gray-background-row">
+    <div class="section-row-content">
+        <h2>
+            Twórzmy kulturę razem!<br>
+            Skontaktuj się z nami:
+        </h2>
+    </div>
+</section>
+
+
+<section class="section-row white-background-row">
+    <div class="section-row-content">
+
+        <div class="">
+            <form class="contact-form-container" action="https://api.web3forms.com/submit" method="POST">
+
+                <input type="hidden" name="access_key" value="09851cf0-adb0-457d-b4ff-a85ead83ea36">
+
+                <input type="hidden" name="redirect" value="https://gildiaorganizatorow.pl/thank-you/">
+
+                <div class="contact-form-cell contact-form-cell-half-width">
+                    <label for="name">Imię i nazwisko: </label>
+                    <input type="text" name="name" required>
+                </div>
+
+                <div class="contact-form-cell contact-form-cell-half-width">
+                    <label for="email">E-mail:</label>
+                    <input type="email" name="email" required>
+                </div>
+                <div class="contact-form-cell">
+                    <label for="message">Wiadomość:</label>
+                    <textarea name="message" required></textarea>
+                </div>
+
+                <div class="contact-form-cell contact-form-agreement-container">
+                    <input type="checkbox" name="agreement" required>
+                    <label for="agreement">Wyrażam zgodę na przetwarzanie danych osobowych zgodnie z ustawą o ochronie
+                        danych
+                        osobowych w związku z wysłaniem danych przez formularz. Podanie danych jest dobrowolne ale
+                        niezbędne
+                        do
+                        przetworzenia zapytania. Zostałem poinformowany/ zostałam poinformowana, że przysługuje mi prawo
+                        dostępu
+                        do swoich danych, możliwość ich poprawiania, żądania zaprzestania ich przetwarzania.
+                        Administratorem
+                        danych osobowych jest Stowarzyszenie Gildia Organizatorów ul. Kościańska 51/6, 54-027
+                        Wrocław.</label>
+                </div>
+
+                <div class="contact-form-cell">
+                    <div class="h-captcha" data-captcha="true"></div>
+                </div>
+
+                <div class="contact-form-cell contact-form-submit-row">
+                    <button type="submit">Wyślij</button>
+                </div>
+
+            </form>
+
+            <script src="https://web3forms.com/client/script.js" async defer></script>
+
+        </div>
+
+    </div>
+</section>
+
+
+
+
+{{ end }}
