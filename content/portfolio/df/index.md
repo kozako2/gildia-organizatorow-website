@@ -1,6 +1,7 @@
 ---
 title: A new post with the filename old-post.md
 type: portfolio
+weight: 2
 resources:
 - name: A
   title: A
