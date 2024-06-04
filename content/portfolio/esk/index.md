@@ -12,6 +12,21 @@ resources:
 - name: C
   title: C
   src: images/C.jpg
+- name: logo_wcrs
+  title: Wrocławskie Centrum Rozwoju Społecznego
+  src: images/logo_wcrs.png
+  params:
+    weight: 1
+- name: logo_wroclaw
+  title: Miasto Wrocław
+  src: images/logo_wroclaw.png
+  params:
+    weight: 2
+- name: logo_park_esk
+  title: Parki ESK
+  src: images/logo_park_esk.png
+  params:
+    weight: 3
 ctamessage: Przejdź na stronę
 ctaurl: https://www.facebook.com/LesnicaBliska
 ---
