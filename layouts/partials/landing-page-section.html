@@ -17,6 +17,16 @@
 
     <div>
         {{ .Content }}
+
+        {{ $logos := .Resources.Match "logo_*" }}
+        {{ if $logos }}
+        <div class="landing-page-layout-logos-container">
+            {{ range sort ($logos) "Params.weight" }}
+            <img src="{{ .RelPermalink }}" alt="{{ .Title }}">
+            {{ end }}
+        </div>
+        {{ end }}
+
         {{ if isset .Params "ctaurl" }}
         <a href="{{ .Params.ctaurl }}" role="button" tabindex="0" class="action-button">{{ .Params.ctamessage }}</a>
         {{ end }}
