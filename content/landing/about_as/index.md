@@ -1,15 +1,9 @@
 ---
 title: A new post with the filename old-post.md
 resources:
-- name: A
-  title: A
-  src: images/A.jpg
-- name: B
-  title: B
-  src: images/B.jpg
-- name: C
-  title: C
-  src: images/C.jpg
+- name: main_image
+  title: Gildia Organizatorów
+  src: images/gildia_organizatorow_landing_page.jpg
 ctamessage: Poznaj nas!
 ctaurl: /o-nas/
 ---

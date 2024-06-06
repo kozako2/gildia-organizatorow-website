@@ -1,0 +1,17 @@
+<div class="landing-page-layout-with-image-container">
+
+    <div>
+        {{ $image := .Resources.GetMatch "main_image" }}
+        {{ with $image }}
+        <img src="{{ .RelPermalink }}" alt="{{ .Title }}">
+        {{ end }}
+    </div>
+
+    <div>
+        {{ .Content }}
+        {{ if isset .Params "ctaurl" }}
+        <a href="{{ .Params.ctaurl }}" role="button" tabindex="0" class="action-button">{{ .Params.ctamessage }}</a>
+        {{ end }}
+    </div>
+
+</div>
