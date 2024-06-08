@@ -54,7 +54,8 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
     color: var(--green);
     font-family: 'Capsuula', sans-serif;
     font-weight: 400;
@@ -247,6 +248,17 @@ address a {
     object-fit: contain;
 }
 
+.landing-page-layout-logos-container {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-around;
+
+}
+.landing-page-layout-logos-container img {
+    display: block;
+    width: 30%;
+}
 
 footer {
     padding-top: 1em;
