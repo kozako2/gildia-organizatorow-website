@@ -1,5 +1,5 @@
 ---
-title: A new post with the filename old-post.md
+title: Dni Fantastyki
 type: portfolio
 weight: 2
 resources:
@@ -12,6 +12,9 @@ resources:
 - name: C
   title: C
   src: images/C.jpg
+- name: realization
+  title: Ludzie patrzący w prawo
+  src: images/projekt_df.png
 ctamessage: Przejdź na stronę
 ctaurl: https://dnifantastyki.pl/
 ---

@@ -1,5 +1,5 @@
 ---
-title: A new post with the filename old-post.md
+title: Parki ESK w Leśnicy
 type: portfolio
 weight: 1
 resources:
@@ -27,6 +27,9 @@ resources:
   src: images/logo_park_esk.png
   params:
     weight: 3
+- name: realization
+  title: Dorośli z dziećmi
+  src: images/projekt_lesnica_park.png
 ctamessage: Przejdź na stronę
 ctaurl: https://www.facebook.com/LesnicaBliska
 ---
