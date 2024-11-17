@@ -1,4 +1,4 @@
-<div class="landing-page-layout-with-image-container">
+<div class="landing-page-layout-with-image-container" id="{{ .Title | urls.Anchorize }}">
 
     <div class="image-grid-container">
         {{ $image := .Resources.GetMatch "A" }}
