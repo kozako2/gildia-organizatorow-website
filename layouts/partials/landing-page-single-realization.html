@@ -1,0 +1,11 @@
+<a href='{{ "portfolio" | relURL }}#{{ .Title | urls.Anchorize }} ' role="button" tabindex="0"
+    class="landing-page-project">
+    {{ with .Resources.GetMatch "realization" }}
+    <div class="landing-page-projects-tile" style="--bg-cover: url('{{ .RelPermalink  }}')">
+        <span class=" action-button">Zobacz więcej</span>
+    </div>
+    {{ end }}
+    <div>
+        <h2> {{ .Title }}</h2>
+    </div>
+</a>
