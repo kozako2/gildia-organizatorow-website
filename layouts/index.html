@@ -29,6 +29,16 @@
                 {{ partial "landing-page-single-realization.html" . }}
                 {{ end }}
             </swiper-slide>
+            <swiper-slide>
+                {{ with .GetPage "portfolio/kongres" }}
+                {{ partial "landing-page-single-realization.html" . }}
+                {{ end }}
+            </swiper-slide>
+            <swiper-slide>
+                {{ with .GetPage "portfolio/zlote_kurczaki" }}
+                {{ partial "landing-page-single-realization.html" . }}
+                {{ end }}
+            </swiper-slide>
         </swiper-container>
 
     </div>

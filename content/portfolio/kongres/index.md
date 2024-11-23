@@ -12,6 +12,9 @@ resources:
 - name: C
   title: Mapa
   src: images/portfolio_kongres_3.png
+- name: realization
+  title: Zdjecie
+  src: images/nasze realizacje_kongres.png
 ---
 
 ### KONgres

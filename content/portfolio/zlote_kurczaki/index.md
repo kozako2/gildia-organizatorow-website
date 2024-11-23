@@ -12,6 +12,9 @@ resources:
 - name: C
   title: Wręczenie nagrody
   src: images/portfolio_kurczaki_3.png
+- name: realization
+  title: Kurczak na tle neonów
+  src: images/nasze realizacje_kurczaki.png
 ctamessage: Przejdź na stronę
 ctaurl: https://www.facebook.com/zlote.kurczaki
 ---
