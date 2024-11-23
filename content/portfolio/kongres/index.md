@@ -4,14 +4,14 @@ type: portfolio
 weight: 4
 resources:
 - name: A
-  title: Mapa
-  src: images/A.webp
-- name: B
   title: Logo
-  src: images/B.png
-- name: C
+  src: images/portfolio_kongres_1.png
+- name: B
   title: Zdjęcie
-  src: images/C.jfif
+  src: images/portfolio_kongres_2.png
+- name: C
+  title: Mapa
+  src: images/portfolio_kongres_3.png
 ---
 
 ### KONgres
