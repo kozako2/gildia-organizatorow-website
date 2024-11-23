@@ -373,7 +373,10 @@ footer a {
     align-items: center;
 
     --bg-cover: "";
-    background-image: var(--bg-cover)
+    background-image: var(--bg-cover);
+
+    border-radius: 14px;
+
 }
 
 .landing-page-projects-tile:hover {
