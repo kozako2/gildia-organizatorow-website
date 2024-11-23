@@ -5,13 +5,13 @@ weight: 3
 resources:
 - name: A
   title: Statuetka
-  src: images/A.jpg
+  src: images/portfolio_kurczaki_1.png
 - name: B
   title: Kurczak na tle neonów
-  src: images/B.jpg
+  src: images/portfolio_kurczaki_2.png
 - name: C
   title: Wręczenie nagrody
-  src: images/C.jpg
+  src: images/portfolio_kurczaki_3.png
 ctamessage: Przejdź na stronę
 ctaurl: https://www.facebook.com/zlote.kurczaki
 ---
