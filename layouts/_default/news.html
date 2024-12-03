@@ -1,0 +1,11 @@
+{{ define "main" }}
+
+{{ range where site.RegularPages "Type" "news" }}
+<section class="section-row white-background-row">
+    <div class="section-row-content">
+        {{ partial "news-single-entry-section.html" . }}
+    </div>
+</section>
+{{ end }}
+
+{{ end }}
