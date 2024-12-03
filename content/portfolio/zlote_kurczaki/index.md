@@ -1,7 +1,7 @@
 ---
 title: Złote kurczaki
 type: portfolio
-weight: 3
+weight: 2
 resources:
 - name: A
   title: Statuetka

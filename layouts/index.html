@@ -20,12 +20,7 @@
             autoplay-delay="2000" autoplay-pause-on-mouse-enter="true" autoplay="true" centered-slides="true"
             space-between="30">
             <swiper-slide>
-                {{ with .GetPage "portfolio/df" }}
-                {{ partial "landing-page-single-realization.html" . }}
-                {{ end }}
-            </swiper-slide>
-            <swiper-slide>
-                {{ with .GetPage "portfolio/esk" }}
+                {{ with .GetPage "portfolio/zlote_kurczaki" }}
                 {{ partial "landing-page-single-realization.html" . }}
                 {{ end }}
             </swiper-slide>
@@ -35,7 +30,12 @@
                 {{ end }}
             </swiper-slide>
             <swiper-slide>
-                {{ with .GetPage "portfolio/zlote_kurczaki" }}
+                {{ with .GetPage "portfolio/df" }}
+                {{ partial "landing-page-single-realization.html" . }}
+                {{ end }}
+            </swiper-slide>
+            <swiper-slide>
+                {{ with .GetPage "portfolio/esk" }}
                 {{ partial "landing-page-single-realization.html" . }}
                 {{ end }}
             </swiper-slide>

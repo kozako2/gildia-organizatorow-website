@@ -1,7 +1,7 @@
 ---
 title: Parki ESK w Leśnicy
 type: portfolio
-weight: 1
+weight: 3
 resources:
 - name: A
   title: A
