@@ -15,6 +15,8 @@ resources:
 - name: realization
   title: Zdjecie
   src: images/nasze realizacje_kongres.png
+ctamessage: Przejdź na stronę
+ctaurl: https://kongres.fandom.org.pl/
 ---
 
 ### KONgres
