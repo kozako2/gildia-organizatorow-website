@@ -53,6 +53,9 @@ body {
     margin: 0 auto;
     font-family: 'Lato', sans-serif;
     font-weight: 300;
+
+    /* Default background color */
+    background-color: var(--white);
 }
 
 h1,
@@ -145,7 +148,7 @@ address a {
     }
 
     .header-image-container {
-        width: 33%;
+        width: 28%;
     }
 
     .header-image {
@@ -307,7 +310,7 @@ footer a {
     }
 
     .footer-container>* {
-        width: 33%
+        width: 28%
     }
 
     .footer-middle-section {
