@@ -6,8 +6,10 @@ resources:
 - name: A
   title: Logo
   src: images/tlo.png
-ctamessage: Przejdź na stronę
-ctaurl: https://kongres.fandom.org.pl/
+params:
+  image_container: "test"
+  ctamessage: Przejdź na stronę
+  ctaurl: https://kongres.fandom.org.pl/
 ---
 
 Już 22 i 23 lutego 2025 roku w Tarczyński Arena Wrocław spotkają się organizatorzy imprez fanowskich z całej Polski. To wyjątkowe wydarzenie, które łączy osoby związane z organizacją konwentów i innych wydarzeń fanowskich, odbędzie się w nowoczesnym, w pełni dostępnym architektonicznie obiekcie.
