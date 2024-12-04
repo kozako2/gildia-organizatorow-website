@@ -1,0 +1,19 @@
+<div class="landing-page-layout-with-image-container" id="{{ partial "news_entry_id.html" . }}">
+
+    <div class="news-image-container-{{ .Param "image_container" }}">
+        {{ range .Resources.ByType "image" }}
+        <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ .Title }}">
+        {{ end }}
+    </div>
+
+    <div>
+        <h2>{{ .Title }}</h2>
+        <em>{{ .PublishDate | time.Format ":date_short" }} {{ .PublishDate | time.Format ":time_short" }}</em>
+        {{ .Content }}
+
+        {{ if isset .Params "ctaurl" }}
+        <a href="{{ .Params.ctaurl }}" role="button" tabindex="0" class="action-button">{{ .Params.ctamessage }}</a>
+        {{ end }}
+    </div>
+
+</div>

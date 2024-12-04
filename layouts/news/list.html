@@ -1,0 +1,16 @@
+{{ define "main" }}
+
+{{/* TODO: fix pagination  */}}
+{{ $pages := .Pages }}
+{{ range (.Paginate $pages 100).Pages }}
+<article class="section-row white-background-row">
+    <div class="section-row-content">
+        {{ .Render "entry" }}
+    </div>
+</article>
+{{ end }}
+
+{{/* TODO: fix pagination  */}}
+{{ template "_internal/pagination.html" . }}
+
+{{ end }}
