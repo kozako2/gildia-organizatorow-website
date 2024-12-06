@@ -3,7 +3,7 @@
 {{/* TODO: fix pagination  */}}
 {{ $pages := .Pages }}
 {{ range (.Paginate $pages 100).Pages }}
-<article class="section-row white-background-row">
+<article class="section-row section-row-auto">
     <div class="section-row-content">
         {{ .Render "entry" }}
     </div>
