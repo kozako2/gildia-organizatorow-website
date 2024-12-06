@@ -1,6 +1,8 @@
-<div class="landing-page-layout-with-image-container" id="{{ partial "news_entry_id.html" . }}">
+{{/* Clean up classes for sections  */}}
+<div class="landing-page-layout-with-image-container" id='{{ partial "news_entry_id.html" . }}'>
 
-    <div class="news-image-container-{{ .Param "image_container" }}">
+    {{/* Make this more configurable  */}}
+    <div class='news-image-container-{{ .Param "image_container" }}'>
         {{ range .Resources.ByType "image" }}
         <img src="{{ .RelPermalink }}" width="{{ .Width }}" height="{{ .Height }}" alt="{{ .Title }}">
         {{ end }}
