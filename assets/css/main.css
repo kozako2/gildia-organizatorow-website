@@ -18,7 +18,6 @@
     flex-direction: column;
     align-items: stretch;
     align-content: center;
-    min-height: 100vh;
 }
 
 .section-row {
@@ -56,6 +55,14 @@ body {
 
     /* Default background color */
     background-color: var(--white);
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
 }
 
 h1,
@@ -401,9 +408,6 @@ footer a {
     }
 }
 
-.doclist-section {
-    min-height: 100vh;
-}
 
 .doclist-container {
     padding-top: 5rem;
