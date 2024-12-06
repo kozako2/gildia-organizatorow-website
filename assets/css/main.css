@@ -47,12 +47,6 @@
     background-color: var(--white);
 }
 
-.main-container>.section-row:nth-last-child(2) {
-    /* Make space for proper footer */
-    flex-grow: 1;
-}
-
-
 body {
     margin: 0 auto;
     font-family: 'Lato', sans-serif;
