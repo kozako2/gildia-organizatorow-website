@@ -1,9 +1,7 @@
 {{ define "main" }}
 
-{{ $image := resources.Get "images/background-logo.svg" }}
-
 {{ range where site.RegularPages "Type" "landing" }}
-{{ with $image }}
+{{ with $image := resources.Get "images/background-logo.svg" }}
 <section class="section-row white-background-row logo-background" style="background-image: url('{{ .RelPermalink }}');">
     {{ end }}
     <div class="section-row-content">
