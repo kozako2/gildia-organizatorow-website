@@ -3,7 +3,7 @@
 
     {{/* Make this more configurable  */}}
     <div class='news-image-container-{{ .Param "image_container" }}'>
-        {{ range $image := .Resources.ByType "image" }}
+        {{ with $image := .Resources.Get "A" }}
         {{ with $processed_image := .Process "webp"}}
         <img src="{{ $processed_image.RelPermalink }}" width="{{ $processed_image.Width }}"
             height="{{ $processed_image.Height }}" alt="{{ $image.Title }}">
