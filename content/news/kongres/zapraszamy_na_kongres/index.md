@@ -6,6 +6,9 @@ resources:
 - name: A
   title: Logo
   src: images/tlo.png
+- name: news-logo
+  title: Logo
+  src: images/logo-transparent.png
 params:
   image_container: "test"
   ctamessage: Przejdź na stronę

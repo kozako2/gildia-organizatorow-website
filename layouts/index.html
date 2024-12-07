@@ -1,5 +1,47 @@
 {{ define "main" }}
 
+<section class="banner-container">
+
+    {{ with $page := .GetPage "news/kongres/zapraszamy_na_kongres" }}
+    <div class="banner-entry" style="background-color:#356AFF">
+        <div class="banner-content banner-content-single" style="color: var(--white)">
+            {{ with $image := $page.Resources.Get "news-logo" }}
+            <img src="{{ $image.RelPermalink }}">
+            {{ end }}
+            <div>
+                <h3 style="color: var(--white); margin-top: 0;">KON_gres 2025 już niebawem!</h4>
+                    Już teraz możesz zapisać sie na KON_gres i wyslać swoją propozycję na publikację konwentową!
+
+                    <br><strong><a href='{{ $page.Parent.RelPermalink }}#{{ partial "news_entry_id.html" $page }}'
+                            style="color: var(--white)">Kliknij i
+                            dowiedz
+                            się
+                            więcej!</a></strong>
+            </div>
+
+        </div>
+    </div>
+    {{ end }}
+    {{/*
+    <div class="banner-entry" style="background-color:#FEF0BF">
+        <div class="banner-content banner-content-right">
+            <div>
+                <h4 style="color: var(--white)">KON_gres 2025 już niebawem!</h4>
+                Już teraz możesz zapisać sie na KON_gres i wyslać swoją propozycję na publikację konwentową!
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="banner-entry" style="background-color:var(--green)">
+        <div class="banner-content banner-content-single">
+            Banner 3 center
+        </div>
+    </div>  */}}
+
+</section>
+
 {{ range where site.RegularPages "Type" "landing" }}
 {{ with $image := resources.Get "images/background-logo.svg" }}
 <section class="section-row white-background-row logo-background" style="background-image: url('{{ .RelPermalink }}');">
