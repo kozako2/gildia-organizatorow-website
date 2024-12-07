@@ -552,6 +552,8 @@ swiper-slide {
 
     align-items: center;
     display: flex;
+
+    background-color: var(--banner-background-color);
 }
 
 .banner-content {
@@ -562,12 +564,23 @@ swiper-slide {
 
     display: flex;
     align-items: center;
+
+    color: var(--banner-text-color)
 }
 
 .banner-content img {
     padding-right: 2em;
     max-width: 20%;
     height: fit-content;
+}
+
+.banner-content h3 {
+    margin-top: 0;
+}
+
+.banner-content a,
+.banner-content h3 {
+    color: var(--banner-text-color);
 }
 
 .banner-content-left {

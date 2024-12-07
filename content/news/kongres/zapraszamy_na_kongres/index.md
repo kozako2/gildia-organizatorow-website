@@ -11,6 +11,11 @@ resources:
   src: images/logo-transparent.png
 params:
   image_container: "test"
+  news:
+    title: "KON_gres 2025 już niebawem!"
+    content: "Już teraz możesz zapisać sie na KON_gres i wyslać swoją propozycję na publikację konwentową!"
+    background-color: "#356AFF"
+    text-color: "#F4F4F4"
   ctamessage: Przejdź na stronę
   ctaurl: https://kongres.fandom.org.pl/
 ---
