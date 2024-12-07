@@ -535,3 +535,75 @@ swiper-slide {
     justify-content: center;
     align-items: center;
 }
+
+
+/* BANNER */
+
+.banner-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.banner-entry {
+    width: 50%;
+    flex-grow: 1;
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+    align-items: center;
+    display: flex;
+
+    background-color: var(--banner-background-color);
+}
+
+.banner-content {
+    max-width: calc(var(--container-max-width) / 2 - 2em);
+
+    padding-left: 2em;
+    padding-right: 2em;
+
+    display: flex;
+    align-items: center;
+
+    color: var(--banner-text-color)
+}
+
+.banner-content img {
+    padding-right: 2em;
+    max-width: 20%;
+    height: fit-content;
+}
+
+.banner-content h3 {
+    margin-top: 0;
+}
+
+.banner-content a,
+.banner-content h3 {
+    color: var(--banner-text-color);
+}
+
+.banner-content-left {
+    margin-left: auto;
+}
+
+.banner-content-right {
+    padding-left: 2em;
+    margin-right: auto;
+}
+
+.banner-content-single {
+    max-width: var(--container-max-width);
+    margin: auto;
+}
+
+
+@media (max-width: 992px) {
+    .banner-entry {
+        width: 100%;
+    }
+
+    .banner-content-left {
+        margin-left: 0;
+    }
+}
