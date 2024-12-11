@@ -5,7 +5,7 @@
     {{ with $page := .GetPage "news/kongres/zapraszamy_na_kongres" }}
     <div class="banner-entry"
         style='--banner-background-color: {{ index $page.Params.news "background-color" }}; --banner-text-color: {{ index $page.Params.news "text-color" }};'>
-        <div class="banner-content banner-content-single">
+        <div class="banner-content banner-content-left">
             {{ with $image := $page.Resources.Get "news-logo" }}
             <img src="{{ $image.RelPermalink }}">
             {{ end }}
@@ -25,6 +25,23 @@
         </div>
     </div>
     {{ end }}
+
+    <div class="banner-entry" style='--banner-background-color: #FEF0BF; --banner-text-color: var(--black);'>
+        <div class="banner-content banner-content-right">
+            {{ with $image := resources.Get "images/kurczaki_logo.jpg" }}
+            <img src="{{ $image.RelPermalink }}">
+            {{ end }}
+            <div>
+                <h3>Złote kurczaki już niebawem!</h3>
+                <strong>
+                    <a href="">Kliknij i dowiedz
+                        się więcej!
+                    </a>
+                </strong>
+            </div>
+
+        </div>
+    </div>
     {{/*
     <div class="banner-entry" style="background-color:#FEF0BF">
         <div class="banner-content banner-content-right">
