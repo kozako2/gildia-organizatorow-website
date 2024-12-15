@@ -547,6 +547,12 @@ swiper-slide {
 }
 
 
+.news-image-container-3-images-in-column img {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+
 /* BANNER */
 
 .banner-container {
