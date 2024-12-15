@@ -1,0 +1,22 @@
+<div class='news-image-container-3-images-in-column'>
+    {{ with $image := .Resources.Get "A" }}
+    {{ with $processed_image := .Process "webp"}}
+    <img src="{{ $processed_image.RelPermalink }}" width="{{ $processed_image.Width }}"
+        height="{{ $processed_image.Height }}" alt="{{ $image.Title }}">
+    {{ end }}
+    {{ end }}
+
+    {{ with $image := .Resources.Get "B" }}
+    {{ with $processed_image := .Process "webp"}}
+    <img src="{{ $processed_image.RelPermalink }}" width="{{ $processed_image.Width }}"
+        height="{{ $processed_image.Height }}" alt="{{ $image.Title }}">
+    {{ end }}
+    {{ end }}
+
+    {{ with $image := .Resources.Get "C" }}
+    {{ with $processed_image := .Process "webp"}}
+    <img src="{{ $processed_image.RelPermalink }}" width="{{ $processed_image.Width }}"
+        height="{{ $processed_image.Height }}" alt="{{ $image.Title }}">
+    {{ end }}
+    {{ end }}
+</div>
