@@ -1,15 +1,8 @@
 {{/* Clean up classes for sections  */}}
 <div class="landing-page-layout-with-image-container" id='{{ partial "news_entry_id.html" . }}'>
 
-    {{/* Make this more configurable  */}}
-    <div class='news-image-container-{{ .Param "image_container" }}'>
-        {{ with $image := .Resources.Get "A" }}
-        {{ with $processed_image := .Process "webp"}}
-        <img src="{{ $processed_image.RelPermalink }}" width="{{ $processed_image.Width }}"
-            height="{{ $processed_image.Height }}" alt="{{ $image.Title }}">
-        {{ end }}
-        {{ end }}
-    </div>
+    {{ $image_path := (print "image_containers/" (.Param "image_container"))  }}
+    {{ .Render $image_path  }}
 
     <div class="news-text-container">
         <h2>{{ .Title }}</h2>

@@ -10,7 +10,7 @@ resources:
   title: Logo
   src: images/logo-transparent.png
 params:
-  image_container: "test"
+  image_container: "single-image"
   news:
     title: "KON_gres 2025 już niebawem!"
     content: "Już teraz możesz zapisać się na KON_gres i wysłać swoją propozycję na publikację konwentową!"
