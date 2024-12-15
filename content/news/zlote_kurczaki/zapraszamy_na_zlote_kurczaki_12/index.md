@@ -6,8 +6,17 @@ resources:
 - name: news-logo
   title: Logo
   src: images/kurczaki_logo.jpg
+- name: A
+  title: Baner z wydarzeniem
+  src: images/ZK 12 WYDARZENIE 02.jpg
+- name: B
+  title: Dwa kurczaki, jeden wolnomularz a drugi bogacz
+  src: images/311469438_3198544690399289_4768084216351304756_n.jpg
+- name: C
+  title: Kurczak, królik i coś na trzepaku
+  src: images/453191784_3643007159286371_5596423301346219775_n.jpg
 params:
-  image_container: "test"
+  image_container: "3-images-in-column"
   news:
     title: "Złote kurczaki już niebawem!!"
     content: "Złote Kurczaki to wrocławski festiwal komiksu niezależnego, który już 15 lutego 2025 zagości na ul. Świdnickiej w BarBarze ze swoją giełdą zinów/komiksów, spotkaniami oraz wielką galą, na której rozdawanie są statuetki Złotego Kurczaka."
