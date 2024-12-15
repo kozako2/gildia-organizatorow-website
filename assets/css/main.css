@@ -536,6 +536,16 @@ swiper-slide {
     align-items: center;
 }
 
+/* NEWS */
+
+.news-text-container>.news-publish-date {
+    font-size: small;
+}
+
+.news-text-container h2 {
+    margin-bottom: 0;
+}
+
 
 /* BANNER */
 
