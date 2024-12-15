@@ -11,9 +11,10 @@
         {{ end }}
     </div>
 
-    <div>
+    <div class="news-text-container">
         <h2>{{ .Title }}</h2>
-        <em>{{ .PublishDate | time.Format ":date_short" }} {{ .PublishDate | time.Format ":time_short" }}</em>
+        <em class="news-publish-date">Data publikacji: {{ .PublishDate | time.Format ":date_short" }}
+            {{ .PublishDate | time.Format ":time_short" }}</em>
         {{ .Content }}
 
         {{ if isset .Params "ctaurl" }}

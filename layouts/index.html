@@ -26,15 +26,21 @@
     </div>
     {{ end }}
 
-    <div class="banner-entry" style='--banner-background-color: #FEF0BF; --banner-text-color: var(--black);'>
+    {{ with $page := .GetPage "news/zlote_kurczaki/zapraszamy_na_zlote_kurczaki_12" }}
+    <div class="banner-entry"
+        style='--banner-background-color: {{ index $page.Params.news "background-color" }}; --banner-text-color: {{ index $page.Params.news "text-color" }};'>
         <div class="banner-content banner-content-right">
-            {{ with $image := resources.Get "images/kurczaki_logo.jpg" }}
+            {{ with $image := $page.Resources.Get "news-logo" }}
             <img src="{{ $image.RelPermalink }}">
             {{ end }}
             <div>
-                <h3>Złote kurczaki już niebawem!</h3>
+                <h3>{{ index $page.Params.news "title" }}</h3>
+                {{ if $content := index $page.Params.news "content"  }}
+                {{ $content }}
+                <br>
+                {{ end }}
                 <strong>
-                    <a href="">Kliknij i dowiedz
+                    <a href='{{ $page.Parent.RelPermalink }}#{{ partial "news_entry_id.html" $page }}'>Kliknij i dowiedz
                         się więcej!
                     </a>
                 </strong>
@@ -42,6 +48,7 @@
 
         </div>
     </div>
+    {{ end }}
     {{/*
     <div class="banner-entry" style="background-color:#FEF0BF">
         <div class="banner-content banner-content-right">
