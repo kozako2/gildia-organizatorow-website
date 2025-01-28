@@ -553,6 +553,15 @@ swiper-slide {
 }
 
 
+.store-img {
+    --store-img-height: 50px;
+    max-height: var(--store-img-height) !important;
+    padding: calc(var(--store-img-height) / 4);
+    border-radius: 0px !important;
+    box-shadow: none !important;
+    display: inline !important;
+}
+
 /* BANNER */
 
 .banner-container {
