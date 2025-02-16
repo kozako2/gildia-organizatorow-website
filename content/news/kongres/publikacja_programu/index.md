@@ -20,8 +20,8 @@ params:
 #   ctaurl: "/kongres/program"
 ---
 
-- [Program opisowy]({{< ref "/kongres/program/opis" >}})
-- [Tabela Programowa]({{< ref "/kongres/program/tabela" >}})
+- [Program opisowy]({{< relref "/kongres/program/opis" >}})
+- [Tabela Programowa]({{< relref "/kongres/program/tabela" >}})
 - Konwencik
 
 {{< rawhtml >}}
