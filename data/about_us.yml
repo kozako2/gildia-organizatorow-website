@@ -35,18 +35,16 @@ members:
       Na Dniach Fantastyki oddał swe serce organizowaniu pracy wolontariuszy.
       W cywilu: informatyk-programista.
     photo: images/members/Aleksander_Spyra_Stowarzyszenie_Gildia_Organizatorow.png
-  - name: Joanna Kubizna
+  - name: Anna Oktaba
     function: Członkini Komisji Rewizyjnej
     description: >
-      Wielka fanka kawy, nie wyobraża sobie bez niej życia. 
-      Uwielbia zwierzęta i fandom jako całość.  Mól książkowy. 
-      Całym sercem kocha Wiedźmina, Warcrafta, DnD, zakony rycerskie i kryminalistykę. 
-      Kolekcjonuje figurki i kostki do gry. Uwielbia ścieżki dźwiękowe. 
-      Z wykształcenia biolog, a dokładniej ichtiolog, do czego zresztą zainspirowały ją “Szczęki” Spielberga. 
-      W fandomie od lat - jako uczestnik i fan od zawsze, jako org od ponad dekady. 
-      Smok Fandomu. Fakapy zamienia w asapy. Wielka miłośniczka narzędzi ułatwiających pracę. 
-      Ma 1000 pomysłów na minutę - o ile ma pod ręką kawę.
-    photo: images/members/Joanna_Kubizna_Stowarzyszenie_Gildia_Organizatorow.png
+      Najpierw ją słychać, a dopiero potem widać. 
+      Ku swojemu i innych lekkiemu zaskoczeniu absolwentka filologii norweskiej, ku zaskoczeniu nikogo broniła się z Tolkiena. 
+      Od małego chowana na fantastyce i sci-fi. Stara harcerka i drużynowa. 
+      Kociara. W czasie wolnym robi na szydełku i ćwiczy sztuki walki. 
+      Przy DFach udziela się od 2011r, a od 2018 r. pracowała przy organizacji imprez zawodowo. 
+      Obecnie podbija dzikie lądy za kanałem La Manche.
+    photo: images/members/Anna_Oktaba_Stowarzyszenie_Gildia_Organizatorow.png
   - name: Jakub Kozerski
     function: Członek Komisji Rewizyjnej
     description: >
@@ -65,7 +63,7 @@ members:
       Współpracuje przy organizowaniu Festiwalu Komiksu Niezależnego Złote Kurczaki.
     photo: images/members/Agnieszka_Jamroszczak_Stowarzyszenie_Gildia_Organizatorow.png
   - name: Klaudia Korcz
-    function: Członkini Stowarzyszenia
+    function: Grafik Stowarzyszenia
     description: >
       Klaudia, dla przyjaciół i współpracowników Gladys.
       Absolwentka Kognitywistyki na Uniwersytecie Śląskim. 
@@ -73,6 +71,18 @@ members:
       Jak już spotyka się z ludźmi, to albo chodzi po lesie albo gra w Zew Cthulhu. 
       W Gildii Organizatorów pracuje przy organizacji Wrocławskich Dni Fantastyki opiekując się kluczowymi partnerami.
     photo: images/members/Klaudia_Korcz_Stowarzyszenie_Gildia_Organizatorow.png
+  - name: Joanna Kubizna
+    function: Członkini Stowarzyszenia
+    description: >
+      Wielka fanka kawy, nie wyobraża sobie bez niej życia. 
+      Uwielbia zwierzęta i fandom jako całość.  Mól książkowy. 
+      Całym sercem kocha Wiedźmina, Warcrafta, DnD, zakony rycerskie i kryminalistykę. 
+      Kolekcjonuje figurki i kostki do gry. Uwielbia ścieżki dźwiękowe. 
+      Z wykształcenia biolog, a dokładniej ichtiolog, do czego zresztą zainspirowały ją “Szczęki” Spielberga. 
+      W fandomie od lat - jako uczestnik i fan od zawsze, jako org od ponad dekady. 
+      Smok Fandomu. Fakapy zamienia w asapy. Wielka miłośniczka narzędzi ułatwiających pracę. 
+      Ma 1000 pomysłów na minutę - o ile ma pod ręką kawę.
+    photo: images/members/Joanna_Kubizna_Stowarzyszenie_Gildia_Organizatorow.png
   - name: Daniel Karabiński
     function: Członek Stowarzyszenia
     description: >
@@ -114,16 +124,6 @@ members:
       Ma patent żeglarza, lubi chodzić po górach, jeździć na nartach, śpiewać, czytać fantastykę i spędzać aktywnie czas. 
       Gra sesje RPG, a jego ulubiony system to World of Darkness. 
     photo: images/members/Piotr_Bujak_Stowarzyszenie_Gildia_Organizatorow.png
-  - name: Anna Oktaba
-    function: Członkini Stowarzyszenia
-    description: >
-      Najpierw ją słychać, a dopiero potem widać. 
-      Ku swojemu i innych lekkiemu zaskoczeniu absolwentka filologii norweskiej, ku zaskoczeniu nikogo broniła się z Tolkiena. 
-      Od małego chowana na fantastyce i sci-fi. Stara harcerka i drużynowa. 
-      Kociara. W czasie wolnym robi na szydełku i ćwiczy sztuki walki. 
-      Przy DFach udziela się od 2011r, a od 2018 r. pracowała przy organizacji imprez zawodowo. 
-      Obecnie podbija dzikie lądy za kanałem La Manche.
-    photo: images/members/Anna_Oktaba_Stowarzyszenie_Gildia_Organizatorow.png
   - name: Piotr Ruciak
     function: Członek Stowarzyszenia
     description: >
