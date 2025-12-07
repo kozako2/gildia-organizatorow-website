@@ -1,7 +1,7 @@
 ---
 title: Parki ESK w Leśnicy
 type: portfolio
-weight: 3
+weight: 4
 resources:
 - name: A
   title: A
@@ -38,7 +38,11 @@ ctaurl: https://www.facebook.com/LesnicaBliska
 
 #### Okres realizacji od 01.06.2024 do 29.09.2024.
 
-Parki ESK w Leśnicy — to projekt skierowany do mieszkańców Wrocławia, a w szczególności leśnickiej społeczności lokalnej.
-Jego celem jest zapewnienie darmowych form spędzania wolnego czasu angażującego dla wszystkich. Pawilon w ubiegłych latach zyskał renomę miejsca otwartego i pozbawionego barier w dostępie do oferowanych tam wydarzeń. Od 2012 r. dostarczamy okolicznym mieszkańcom warsztaty sportowe i edukacyjne, imprezy kulturalne oraz zajęcia edukacyjne w prawie każdy weekend wakacji.
+Parki ESK w Leśnicy — to projekt skierowany do mieszkańców Wrocławia, a w szczególności leśnickiej społeczności
+lokalnej. Jego celem jest zapewnienie darmowych form spędzania wolnego czasu angażującego dla wszystkich. Pawilon w
+ubiegłych latach zyskał renomę miejsca otwartego i pozbawionego barier w dostępie do oferowanych tam wydarzeń. Od 2012
+r. dostarczamy okolicznym mieszkańcom warsztaty sportowe i edukacyjne, imprezy kulturalne oraz zajęcia edukacyjne w
+prawie każdy weekend wakacji.
 
-Do prowadzenia spotkań zapraszamy osoby, które na co dzień pracują jak z dorosłymi, tak i z małymi mieszkańcami Wrocławia, przez co atmosfera warsztatów i spotkań jest miła i przyjemna. 
+Do prowadzenia spotkań zapraszamy osoby, które na co dzień pracują jak z dorosłymi, tak i z małymi mieszkańcami
+Wrocławia, przez co atmosfera warsztatów i spotkań jest miła i przyjemna.
