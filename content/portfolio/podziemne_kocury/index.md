@@ -13,8 +13,8 @@ resources:
   title: Logo
   src: images/portfolio_2.jpg
 - name: realization
-  title: Podziemne Kocur mordka
-  src: images/nasze_realizacje_kocury.png
+  title: a Podziemne Kocur mordka - duży
+  src: images/nasze_realizacje_kocury_realization.png
 ctamessage: Przejdź na stronę
 ctaurl: https://www.facebook.com/podziemnekocury
 ---
