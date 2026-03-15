@@ -1,8 +1,9 @@
 {{/* Clean up classes for sections  */}}
 <div class="landing-page-layout-with-image-container" id='{{ partial "news_entry_id.html" . }}'>
 
-    {{ $image_path := (print "image_containers/" (.Param "image_container"))  }}
-    {{ .Render $image_path  }}
+    {{ $image_partial := (print "news-" (.Param "image_container"))  }}
+
+    {{ partial $image_partial . }}
 
     <div class="news-text-container">
         <h2>{{ .Title }}</h2>
