@@ -1,7 +1,7 @@
 ---
 title: KONgres
 type: portfolio
-weight: 2
+weight: 4
 resources:
 - name: A
   title: Logo

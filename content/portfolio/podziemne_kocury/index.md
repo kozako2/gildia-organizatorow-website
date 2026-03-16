@@ -1,7 +1,7 @@
 ---
 title: Podziemne Kocury
 type: portfolio
-weight: 1
+weight: 2
 resources:
 - name: A
   title: Podziemne Kocur mordka
