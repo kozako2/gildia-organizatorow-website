@@ -634,3 +634,12 @@ swiper-slide {
         margin-left: 0;
     }
 }
+
+.realization-caption {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding-bottom: 1rem;
+}
