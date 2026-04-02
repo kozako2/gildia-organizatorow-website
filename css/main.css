@@ -126,6 +126,7 @@ address a {
     margin: 0;
     padding-top: 2rem;
     padding-bottom: 2rem;
+    padding-left: 0;
 
     background-color: var(--black);
     opacity: 0.9;
@@ -139,6 +140,7 @@ address a {
 .main-menu-list li {
     padding-top: 0.7rem;
     padding-bottom: 0.7rem;
+    padding-left: 40px;
 }
 
 .main-menu a {
@@ -230,6 +232,7 @@ address a {
     color: var(--white);
 }
 
+.section-row-auto:nth-of-type(even) h4,
 .section-row-auto:nth-of-type(even) h3,
 .section-row-auto:nth-of-type(even) h2 {
     color: var(--white);
@@ -271,6 +274,7 @@ address a {
 .landing-page-layout-logos-container img {
     display: block;
     width: 30%;
+    background-color: var(--white);
 }
 
 footer {
@@ -631,4 +635,13 @@ swiper-slide {
     .banner-content-left {
         margin-left: 0;
     }
+}
+
+.realization-caption {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding-bottom: 1rem;
 }
